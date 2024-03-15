@@ -27,9 +27,16 @@ function harry_theme_support()
 }
 add_action("after_setup_theme", "harry_theme_support");
 
+// 
+function harry_header()
+{
+    get_template_part('./template-parts/header/header-1');
+}
+
 // Harry css js enqueue
 function harry_add_theme_scripts()
 {
+    wp_enqueue_style('harry-fonts', harry_fonts_url(), array(), '1.1', 'all');
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), '1.1', 'all');
     wp_enqueue_style('meanmenu', get_template_directory_uri() . '/assets/css/meanmenu.css', array(), '1.1', 'all');
     wp_enqueue_style('animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '1.1', 'all');
@@ -76,3 +83,18 @@ function harry_add_theme_scripts()
     }
 }
 add_action('wp_enqueue_scripts', 'harry_add_theme_scripts');
+
+// Register Fonts
+function harry_fonts_url()
+{
+    $font_url = '';
+
+    /*
+    Translators: If there are characters in your language that are not supported
+    by chosen font(s), translate this to 'off'. Do not translate into your own language.
+     */
+    if ('off' !== _x('on', 'Google font: on or off', 'harry')) {
+        $font_url = 'https://fonts.googleapis.com/css2?' . urlencode('family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+    }
+    return $font_url;
+}
