@@ -24,9 +24,9 @@ function harry_header_info()
     new \Kirki\Field\Text(
         [
             'settings' => 'harry_email',
-            'label'    => esc_html__('Text Control', 'kirki'),
+            'label'    => esc_html__('Header Email', 'kirki'),
             'section'  => 'harry_header_info',
-            'default'  => esc_html__('This is a default value', 'kirki'),
+            'default'  => esc_html__('info@example.com', 'kirki'),
             'priority' => 10,
         ]
     );
@@ -34,18 +34,18 @@ function harry_header_info()
     new \Kirki\Field\Textarea(
         [
             'settings'    => 'harry_phone',
-            'label'       => esc_html__('Textarea Control', 'kirki'),
+            'label'       => esc_html__('Header Phone', 'kirki'),
             'section'     => 'harry_header_info',
-            'default'     => esc_html__('This is a default value', 'kirki'),
+            'default'     => esc_html__('+964 742 44 763', 'kirki'),
         ]
     );
 
     new \Kirki\Field\Textarea(
         [
             'settings'    => 'harry_timing',
-            'label'       => esc_html__('Textarea Control', 'kirki'),
+            'label'       => esc_html__('Header Time', 'kirki'),
             'section'     => 'harry_header_info',
-            'default'     => esc_html__('This is a default value', 'kirki'),
+            'default'     => esc_html__('Sunday-Thures 10am-07pm', 'kirki'),
         ]
     );
 }
@@ -66,10 +66,19 @@ function harry_logo_section()
 
     new \Kirki\Field\Image(
         [
-            'settings' => 'harry_email',
-            'label'    => esc_html__('Text Control', 'kirki'),
+            'settings' => 'harry_logo',
+            'label'    => esc_html__('Logo', 'kirki'),
             'section'  => 'harry_header_logo',
-            'default'  => esc_html__('Please upload your logo here', 'kirki'),
+            'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings' => 'harry_logo_sec',
+            'label'    => esc_html__('Logo sec', 'kirki'),
+            'section'  => 'harry_header_logo',
             'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
             'priority' => 10,
         ]

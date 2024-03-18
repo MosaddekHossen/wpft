@@ -1,3 +1,10 @@
+<?php 
+$harry_Header_email = get_theme_mod('harry_email','info@example.com');
+$harry_Header_phone = get_theme_mod('harry_phone','+964 742 44 763');
+$harry_Header_time = get_theme_mod('harry_timing','Sunday-Thures 10am-07pm');
+var_dump($harry_Header_email);
+?>
+
 <!-- header area start -->
 <header>
     <div class="header__area header__white-solid">
