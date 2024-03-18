@@ -54,7 +54,6 @@ add_action('wp_enqueue_scripts', 'harry_add_theme_scripts');
 function harry_fonts_url()
 {
     $font_url = '';
-
     /*
     Translators: If there are characters in your language that are not supported
     by chosen font(s), translate this to 'off'. Do not translate into your own language.
