@@ -33,7 +33,6 @@ function harry_header()
     get_template_part('template-parts/header/header-1');
 }
 
-
-
 include_once("inc/common/scripts.php");
 include_once("inc/harry-kirki.php");
+include_once("inc/template-function.php");

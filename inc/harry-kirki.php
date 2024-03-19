@@ -73,15 +73,5 @@ function harry_logo_section()
             'priority' => 10,
         ]
     );
-
-    new \Kirki\Field\Image(
-        [
-            'settings' => 'harry_logo_sec',
-            'label'    => esc_html__('Logo sec', 'harry'),
-            'section'  => 'harry_header_logo',
-            'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
-            'priority' => 10,
-        ]
-    );
 }
 harry_logo_section();
