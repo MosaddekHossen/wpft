@@ -3,8 +3,8 @@ new \Kirki\Panel(
     'harry_panel',
     [
         'priority'    => 10,
-        'title'       => esc_html__('Harry Option', 'kirki'),
-        'description' => esc_html__('My Panel Description.', 'kirki'),
+        'title'       => esc_html__('Harry Option', 'harry'),
+        'description' => esc_html__('My Panel Description.', 'harry'),
     ]
 );
 
@@ -14,8 +14,8 @@ function harry_header_info()
     new \Kirki\Section(
         'harry_header_info',
         [
-            'title'       => esc_html__('Header info', 'kirki'),
-            'description' => esc_html__('My Section Description.', 'kirki'),
+            'title'       => esc_html__('Header info', 'harry'),
+            'description' => esc_html__('My Section Description.', 'harry'),
             'panel'       => 'harry_panel',
             'priority'    => 160,
         ]
@@ -24,9 +24,9 @@ function harry_header_info()
     new \Kirki\Field\Text(
         [
             'settings' => 'harry_email',
-            'label'    => esc_html__('Header Email', 'kirki'),
+            'label'    => esc_html__('Header Email', 'harry'),
             'section'  => 'harry_header_info',
-            'default'  => esc_html__('info@example.com', 'kirki'),
+            'default'  => esc_html__('info@example.com', 'harry'),
             'priority' => 10,
         ]
     );
@@ -34,18 +34,18 @@ function harry_header_info()
     new \Kirki\Field\Textarea(
         [
             'settings'    => 'harry_phone',
-            'label'       => esc_html__('Header Phone', 'kirki'),
+            'label'       => esc_html__('Header Phone', 'harry'),
             'section'     => 'harry_header_info',
-            'default'     => esc_html__('+964 742 44 763', 'kirki'),
+            'default'     => esc_html__('+964 742 44 763', 'harry'),
         ]
     );
 
     new \Kirki\Field\Textarea(
         [
             'settings'    => 'harry_timing',
-            'label'       => esc_html__('Header Time', 'kirki'),
+            'label'       => esc_html__('Header Time', 'harry'),
             'section'     => 'harry_header_info',
-            'default'     => esc_html__('Sunday-Thures 10am-07pm', 'kirki'),
+            'default'     => esc_html__('Sunday-Thures 10am-07pm', 'harry'),
         ]
     );
 }
@@ -57,8 +57,8 @@ function harry_logo_section()
     new \Kirki\Section(
         'harry_header_logo',
         [
-            'title'       => esc_html__('Logo', 'kirki'),
-            'description' => esc_html__('Logo section here', 'kirki'),
+            'title'       => esc_html__('Logo', 'harry'),
+            'description' => esc_html__('Logo section here', 'harry'),
             'panel'       => 'harry_panel',
             'priority'    => 160,
         ]
@@ -67,7 +67,7 @@ function harry_logo_section()
     new \Kirki\Field\Image(
         [
             'settings' => 'harry_logo',
-            'label'    => esc_html__('Logo', 'kirki'),
+            'label'    => esc_html__('Logo', 'harry'),
             'section'  => 'harry_header_logo',
             'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
             'priority' => 10,
@@ -77,7 +77,7 @@ function harry_logo_section()
     new \Kirki\Field\Image(
         [
             'settings' => 'harry_logo_sec',
-            'label'    => esc_html__('Logo sec', 'kirki'),
+            'label'    => esc_html__('Logo sec', 'harry'),
             'section'  => 'harry_header_logo',
             'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
             'priority' => 10,
