@@ -24,6 +24,13 @@ function harry_theme_support()
         'gallery',
         'quote'
     ));
+
+    register_nav_menus(
+        array(
+            'main-menu' => __('Main Menu', 'harry'),
+            'footer-menu' => __('Footer Menu', 'harry'),
+        )
+    );
 }
 add_action("after_setup_theme", "harry_theme_support");
 
