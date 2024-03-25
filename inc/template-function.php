@@ -18,8 +18,8 @@ function harry_menu()
             'theme_location'  => 'main-menu',
             'menu_class'      => 'menu-test-class',
             'menu_id'         => 'menu-test-id',
-            // 'fallback_cb'     => 'Harry_Walker_Nav_Menu::fallback',
-            // 'walker'     => new Harry_Walker_Nav_Menu,
+            'fallback_cb'     => 'Harry_Walker_Nav_Menu::fallback',
+            'walker'     => new Harry_Walker_Nav_Menu,
         )
     );
 }
