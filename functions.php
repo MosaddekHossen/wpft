@@ -43,3 +43,4 @@ function harry_header()
 include_once("inc/common/scripts.php");
 include_once("inc/harry-kirki.php");
 include_once("inc/template-function.php");
+include_once("inc/nav-walker.php");
