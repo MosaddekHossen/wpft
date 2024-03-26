@@ -10,6 +10,17 @@ function harry_logo()
 <?php
 }
 
+// harry_search_logo
+function harry_search_logo()
+{
+    $harry_search_logo = get_theme_mod('harry_search_logo', get_template_directory_uri() . '/assets/img/logo/logo.svg');
+?>
+    <a href="<?php echo esc_url(home_url('/')) ?>">
+        <img src="<?php echo esc_url($harry_search_logo); ?>" alt="<?php echo bloginfo(); ?>">
+    </a>
+<?php
+}
+
 // harry_menu
 function harry_menu()
 {

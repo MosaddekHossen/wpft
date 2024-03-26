@@ -6,9 +6,7 @@
                 <div class="search__wrapper">
                     <div class="search__top d-flex justify-content-between align-items-center">
                         <div class="search__logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo/logo.svg" alt="">
-                            </a>
+                            <?php harry_search_logo(); ?>
                         </div>
                         <div class="search__close">
                             <button type="button" class="search__close-btn search-close-btn">
