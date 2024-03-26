@@ -20,9 +20,9 @@
                         </div>
                     </div>
                     <div class="search__form">
-                        <form action="#">
+                        <form action="/" method="get">
                             <div class="search__input">
-                                <input class="search-input-field" type="text" placeholder="Type here to search...">
+                                <input class="search-input-field" type="text" name="s" value="<?php the_search_query(); ?>" placeholder="<?php echo esc_attr__('Type here to search...', 'harry'); ?>">
                                 <span class="search-focus-border"></span>
                                 <button type="submit">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
