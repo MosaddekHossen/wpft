@@ -73,5 +73,15 @@ function harry_logo_section()
             'priority' => 10,
         ]
     );
+
+    new \Kirki\Field\Image(
+        [
+            'settings' => 'harry_search_logo',
+            'label'    => esc_html__('Search Logo', 'harry'),
+            'section'  => 'harry_header_logo',
+            'default'     => get_template_directory_uri() . '/assets/img/logo/logo.svg',
+            'priority' => 10,
+        ]
+    );
 }
 harry_logo_section();
