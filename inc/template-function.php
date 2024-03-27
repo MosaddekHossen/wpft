@@ -21,6 +21,17 @@ function harry_search_logo()
 <?php
 }
 
+// harry_side_logo
+function harry_side_logo()
+{
+    $harry_side_logo = get_theme_mod('harry_side_logo', get_template_directory_uri() . '/assets/img/logo/logo-black.svg');
+?>
+    <a href="<?php echo esc_url(home_url('/')) ?>">
+        <img src="<?php echo esc_url($harry_side_logo); ?>" alt="<?php echo bloginfo(); ?>">
+    </a>
+<?php
+}
+
 // harry_menu
 function harry_menu()
 {
