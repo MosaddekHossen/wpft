@@ -38,8 +38,22 @@ function harry_menu()
     wp_nav_menu(
         array(
             'theme_location'  => 'main-menu',
-            'menu_class'      => 'menu-test-class',
-            'menu_id'         => 'menu-test-id',
+            'menu_class'      => '',
+            'menu_id'         => '',
+            'fallback_cb'     => 'Harry_Walker_Nav_Menu::fallback',
+            'walker'     => new Harry_Walker_Nav_Menu,
+        )
+    );
+}
+
+// harry_menu
+function harry_side_menu()
+{
+    wp_nav_menu(
+        array(
+            'theme_location'  => 'side-menu',
+            'menu_class'      => '',
+            'menu_id'         => '',
             'fallback_cb'     => 'Harry_Walker_Nav_Menu::fallback',
             'walker'     => new Harry_Walker_Nav_Menu,
         )
