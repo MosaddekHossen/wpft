@@ -32,6 +32,47 @@ function harry_side_logo()
 <?php
 }
 
+// harry_social
+function harry_social()
+{
+    $harry_facebook = get_theme_mod('harry_facebook', __('#', 'harry'));
+    $harry_twitter = get_theme_mod('harry_twitter', __('#', 'harry'));
+    $harry_youtube = get_theme_mod('harry_youtube', __('#', 'harry'));
+    $harry_linkedin = get_theme_mod('harry_linkedin', __('#', 'harry'));
+    $harry_flickr = get_theme_mod('harry_flickr', __('', 'harry'));
+    $harry_vimeo = get_theme_mod('harry_vimeo', __('', 'harry'));
+    $harry_behance = get_theme_mod('harry_behance', __('', 'harry'));
+?>
+    <?php if (!empty($harry_facebook)) : ?>
+        <a href="<?php echo esc_url($harry_facebook); ?>"><i class="fab fa-facebook-f"></i></a>
+    <?php endif; ?>
+
+    <?php if (!empty($harry_twitter)) : ?>
+        <a href="<?php echo esc_url($harry_twitter); ?>"><i class="fab fa-twitter"></i></a>
+    <?php endif; ?>
+
+    <?php if (!empty($harry_youtube)) : ?>
+        <a href="<?php echo esc_url($harry_youtube); ?>"><i class="fab fa-youtube"></i></a>
+    <?php endif; ?>
+
+    <?php if (!empty($harry_linkedin)) : ?>
+        <a href="<?php echo esc_url($harry_linkedin); ?>"><i class="fab fa-linkedin"></i></a>
+    <?php endif; ?>
+
+    <?php if (!empty($harry_flickr)) : ?>
+        <a href="<?php echo esc_url($harry_flickr); ?>"><i class="fab fa-flickr"></i></a>
+    <?php endif; ?>
+
+    <?php if (!empty($harry_vimeo)) : ?>
+        <a href="<?php echo esc_url($harry_vimeo); ?>"><i class="fab fa-vimeo"></i></a>
+    <?php endif; ?>
+
+    <?php if (!empty($harry_behance)) : ?>
+        <a href="<?php echo esc_url($harry_behance); ?>"><i class="fab fa-behance"></i></a>
+    <?php endif; ?>
+<?php
+}
+
 // harry_menu
 function harry_menu()
 {

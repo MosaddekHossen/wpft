@@ -37,15 +37,17 @@ $harry_side_button_url = get_theme_mod('harry_side_button_url', __('#', 'harry')
                 </div>
             <?php endif; ?>
             <div class="offcanvas__social">
-                <h3 class="offcanvas__social-title">Follow :</h3>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <h3 class="offcanvas__social-title"><?php echo esc_html__('Follow :', 'harry'); ?></h3>
+                <?php harry_social(); ?>
             </div>
             <div class="offcanvas__contact">
-                <p class="offcanvas__contact-call"><a href="tel:<?php esc_url($harry_side_phone); ?>"><?php echo esc_html($harry_side_phone); ?></a></p>
-                <p class="offcanvas__contact-mail"><a href="mailto:<?php echo esc_url($harry_side_email); ?>"><?php echo esc_html($harry_side_email); ?></a></p>
+                <?php if (!empty($harry_side_phone)) : ?>
+                    <p class="offcanvas__contact-call"><a href="tel:<?php esc_url($harry_side_phone); ?>"><?php echo esc_html($harry_side_phone); ?></a></p>
+                <?php endif; ?>
+
+                <?php if (!empty($harry_side_email)) : ?>
+                    <p class="offcanvas__contact-mail"><a href="mailto:<?php echo esc_url($harry_side_email); ?>"><?php echo esc_html($harry_side_email); ?></a></p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
