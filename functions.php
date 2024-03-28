@@ -28,7 +28,7 @@ function harry_theme_support()
     register_nav_menus(
         array(
             'main-menu' => __('Main Menu', 'harry'),
-            'footer-menu' => __('Footer Menu', 'harry'),
+            'side-menu' => __('Side Menu', 'harry'),
         )
     );
 }

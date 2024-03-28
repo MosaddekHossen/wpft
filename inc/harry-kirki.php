@@ -73,6 +73,7 @@ function harry_side_info_section()
             'priority' => 10,
         ]
     );
+
     new \Kirki\Field\Text(
         [
             'settings' => 'harry_side_email',
@@ -113,6 +114,91 @@ function harry_side_info_section()
     );
 }
 harry_side_info_section();
+
+// harry_social_section
+function harry_social_section()
+{
+    new \Kirki\Section(
+        'harry_social_info',
+        [
+            'title'       => esc_html__('Social Icon', 'harry'),
+            'description' => esc_html__('Side info section here', 'harry'),
+            'panel'       => 'harry_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_facebook',
+            'label'    => esc_html__('Facebook Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('#', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_twitter',
+            'label'    => esc_html__('Twitter Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('#', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_youtube',
+            'label'    => esc_html__('Youtube Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('#', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_linkedin',
+            'label'    => esc_html__('Linkedin Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('#', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_flickr',
+            'label'    => esc_html__('Flickr Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_vimeo',
+            'label'    => esc_html__('Vimeo Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_behance',
+            'label'    => esc_html__('Behance Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('', 'harry'),
+            'priority' => 10,
+        ]
+    );
+}
+harry_social_section();
 
 // Header logo section
 function harry_logo_section()

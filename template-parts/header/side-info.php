@@ -1,3 +1,10 @@
+<?php
+$harry_side_email = get_theme_mod('harry_side_email', __('info@example.com', 'harry'));
+$harry_side_phone = get_theme_mod('harry_side_phone', __('+964 742 44 763', 'harry'));
+$harry_side_button = get_theme_mod('harry_side_button', __('Getting Started', 'harry'));
+$harry_side_button_url = get_theme_mod('harry_side_button_url', __('#', 'harry'));
+?>
+
 <!-- offcanvas area start -->
 <div class="offcanvas__area offcanvas__area-1">
     <div class="offcanvas__wrapper">
@@ -21,29 +28,26 @@
             <div class="mobile-menu fix d-lg-none"></div>
             <div class="offcanvas__menu offcanvas__menu-ff-space d-none d-lg-block">
                 <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Service</a></li>
-                        <li><a href="blog-grid-2.html">Blog</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <?php harry_side_menu(); ?>
                 </nav>
             </div>
-            <div class="offcanvas__btn">
-                <a href="contact.html" class="tp-btn-offcanvas">Getting Started <i class="fa-regular fa-chevron-right"></i></a>
-            </div>
+            <?php if (!empty($harry_side_button)) : ?>
+                <div class="offcanvas__btn">
+                    <a href="<?php echo esc_html($harry_side_button_url); ?>" class="tp-btn-offcanvas"><?php echo esc_html($harry_side_button); ?><i class="fa-regular fa-chevron-right"></i></a>
+                </div>
+            <?php endif; ?>
             <div class="offcanvas__social">
-                <h3 class="offcanvas__social-title">Follow :</h3>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <h3 class="offcanvas__social-title"><?php echo esc_html__('Follow :', 'harry'); ?></h3>
+                <?php harry_social(); ?>
             </div>
             <div class="offcanvas__contact">
-                <p class="offcanvas__contact-call"><a href="tel:+964-742-44-763">+964 742 44 763</a></p>
-                <p class="offcanvas__contact-mail"><a href="mailto:info@harry.com">info@harry.com</a></p>
+                <?php if (!empty($harry_side_phone)) : ?>
+                    <p class="offcanvas__contact-call"><a href="tel:<?php esc_url($harry_side_phone); ?>"><?php echo esc_html($harry_side_phone); ?></a></p>
+                <?php endif; ?>
+
+                <?php if (!empty($harry_side_email)) : ?>
+                    <p class="offcanvas__contact-mail"><a href="mailto:<?php echo esc_url($harry_side_email); ?>"><?php echo esc_html($harry_side_email); ?></a></p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
