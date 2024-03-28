@@ -21,6 +21,22 @@ function harry_header_info()
         ]
     );
 
+    new \Kirki\Field\Select(
+        [
+            'settings'    => 'header_default_setting',
+            'label'       => esc_html__('Header Select', 'harry'),
+            'section'     => 'harry_header_info',
+            'default'     => 'header-style-1',
+            'placeholder' => esc_html__('Choose an option', 'harry'),
+            'choices'     => [
+                'header-style-1' => esc_html__('Header Style 01', 'harry'),
+                'header-style-2' => esc_html__('Header Style 02', 'harry'),
+                'header-style-3' => esc_html__('Header Style 03', 'harry'),
+                'header-style-4' => esc_html__('Header Style 04', 'harry'),
+            ],
+        ]
+    );
+
     new \Kirki\Field\Text(
         [
             'settings' => 'harry_email',

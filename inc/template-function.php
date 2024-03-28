@@ -1,4 +1,11 @@
 <?php
+
+// Harry_header
+function harry_header()
+{
+    get_template_part('template-parts/header/header-1');
+}
+
 // harry_logo
 function harry_logo()
 {
