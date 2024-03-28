@@ -112,6 +112,62 @@ function harry_side_info_section()
             'default'     => esc_html__('+964 742 44 763', 'harry'),
         ]
     );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_logo_switch',
+            'label'       => esc_html__('Logo Switch', 'harry'),
+            'description' => esc_html__('Logo switch control', 'harry'),
+            'section'     => 'harry_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
+        ]
+    );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_shape_switch',
+            'label'       => esc_html__('Shape Switch', 'harry'),
+            'description' => esc_html__('Shape switch control', 'harry'),
+            'section'     => 'harry_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
+        ]
+    );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_menu_switch',
+            'label'       => esc_html__('Side Menu Switch', 'harry'),
+            'description' => esc_html__('Side menu switch control', 'harry'),
+            'section'     => 'harry_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
+        ]
+    );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_social_switch',
+            'label'       => esc_html__('Side Social Switch', 'harry'),
+            'description' => esc_html__('Side social switch control', 'harry'),
+            'section'     => 'harry_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
+        ]
+    );
 }
 harry_side_info_section();
 
