@@ -133,5 +133,5 @@ $harry_Header_time = get_theme_mod('harry_timing', 'Sunday-Thures 10am-07pm');
 </header>
 <!-- header area end -->
 
-<?php get_template_part('/template-parts/header/search-header') ?>
 <?php get_template_part('/template-parts/header/side-info') ?>
+<?php get_template_part('/template-parts/header/search-header') ?>
