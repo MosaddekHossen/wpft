@@ -21,6 +21,22 @@ function harry_header_info()
         ]
     );
 
+    new \Kirki\Field\Select(
+        [
+            'settings'    => 'header_default_setting',
+            'label'       => esc_html__('Header Select', 'harry'),
+            'section'     => 'harry_header_info',
+            'default'     => 'header-style-1',
+            'placeholder' => esc_html__('Choose an option', 'harry'),
+            'choices'     => [
+                'header-style-1' => esc_html__('Header Style 01', 'harry'),
+                'header-style-2' => esc_html__('Header Style 02', 'harry'),
+                'header-style-3' => esc_html__('Header Style 03', 'harry'),
+                'header-style-4' => esc_html__('Header Style 04', 'harry'),
+            ],
+        ]
+    );
+
     new \Kirki\Field\Text(
         [
             'settings' => 'harry_email',
@@ -110,6 +126,62 @@ function harry_side_info_section()
             'label'       => esc_html__('Header side phone', 'harry'),
             'section'     => 'harry_side_info',
             'default'     => esc_html__('+964 742 44 763', 'harry'),
+        ]
+    );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_logo_switch',
+            'label'       => esc_html__('Logo Switch', 'harry'),
+            'description' => esc_html__('Logo switch control', 'harry'),
+            'section'     => 'harry_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
+        ]
+    );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_shape_switch',
+            'label'       => esc_html__('Shape Switch', 'harry'),
+            'description' => esc_html__('Shape switch control', 'harry'),
+            'section'     => 'harry_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
+        ]
+    );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_menu_switch',
+            'label'       => esc_html__('Side Menu Switch', 'harry'),
+            'description' => esc_html__('Side menu switch control', 'harry'),
+            'section'     => 'harry_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
+        ]
+    );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_social_switch',
+            'label'       => esc_html__('Side Social Switch', 'harry'),
+            'description' => esc_html__('Side social switch control', 'harry'),
+            'section'     => 'harry_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
         ]
     );
 }

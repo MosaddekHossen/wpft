@@ -1,4 +1,21 @@
 <?php
+
+// Harry_header
+function harry_header()
+{
+    $header_default_style = get_theme_mod('header_default_setting', 'header-style-1');
+
+    if ($header_default_style == 'header-style-1') {
+        get_template_part('template-parts/header/header-1');
+    } elseif ($header_default_style == 'header-style-2') {
+        get_template_part('template-parts/header/header-2');
+    } elseif ($header_default_style == 'header-style-3') {
+        get_template_part('template-parts/header/header-3');
+    } elseif ($header_default_style == 'header-style-4') {
+        get_template_part('template-parts/header/header-4');
+    }
+}
+
 // harry_logo
 function harry_logo()
 {
