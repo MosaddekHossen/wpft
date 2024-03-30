@@ -33,6 +33,7 @@ function harry_header_info()
                 'header-style-2' => esc_html__('Header Style 02', 'harry'),
                 'header-style-3' => esc_html__('Header Style 03', 'harry'),
                 'header-style-4' => esc_html__('Header Style 04', 'harry'),
+                'header-style-5' => esc_html__('Header Style 05', 'harry'),
             ],
         ]
     );
