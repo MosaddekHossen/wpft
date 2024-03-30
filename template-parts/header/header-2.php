@@ -13,60 +13,13 @@ $harry_Header_time = get_theme_mod('harry_timing', 'Sunday-Thures 10am-07pm');
                     <div class="row align-items-center">
                         <div class="col-xxl-3 col-xl-3 col-lg-2 col-md-4 col-sm-5 col-8">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo/logo-green.svg" alt="logo">
-                                </a>
+                                <?php harry_logo(); ?>
                             </div>
                         </div>
                         <div class="col-xxl-7 col-xl-7 col-lg-8 d-none d-lg-block">
                             <div class="main-menu main-menu-9 main-menu-ff-space">
                                 <nav id="mobile-menu">
-                                    <ul>
-                                        <li class="has-dropdown">
-                                            <a href="index.html">Home</a>
-                                            <ul class="submenu">
-                                                <li><a href="index.html">Main Demo</a></li>
-                                                <li><a href="index-shop.html">Shop Demo</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="portfolio.html">Protfolio</a>
-                                            <ul class="submenu">
-                                                <li><a href="portfolio.html">Classic Style</a></li>
-                                                <li><a href="portfolio-details-list.html">List With Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown ">
-                                            <a href="#">Pages</a>
-                                            <ul class="submenu">
-                                                <li><a href="portfolio.html">Portfoilo</a></li>
-                                                <li><a href="portfolio-details-list.html">Portfoilo Details</a></li>
-                                                <li><a href="about-me.html">About Me</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="services-details.html">Service Details</a></li>
-                                                <li><a href="404.html">404 Page</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="blog.html">Blog</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog Standard</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="shop.html">Shop</a>
-                                            <ul class="submenu">
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="product-details.html">Product Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="contact.html">Contact</a>
-                                        </li>
-                                    </ul>
+                                    <?php harry_menu(); ?>
                                 </nav>
                                 <!-- for wp -->
                                 <div class="header__hamburger ml-50 d-none">
