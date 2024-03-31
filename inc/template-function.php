@@ -18,6 +18,12 @@ function harry_header()
     }
 }
 
+// harry_footer
+function harry_footer()
+{
+    get_template_part('template-parts/footer/footer-1');
+}
+
 // harry_logo
 function harry_logo()
 {
