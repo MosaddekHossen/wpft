@@ -98,6 +98,14 @@ function harry_social()
 <?php
 }
 
+function footer_copyright()
+{
+    $footer_copyright = get_theme_mod('harry_footer_copyright', __('© 2024 Harry All Rights Reserved.', 'harry'));
+?>
+    <?php echo wp_kses_post($footer_copyright); ?>
+<?php
+}
+
 // harry_menu
 function harry_menu()
 {
