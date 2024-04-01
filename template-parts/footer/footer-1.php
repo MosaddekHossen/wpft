@@ -32,8 +32,7 @@
                          </div>
                          <div class="col-sm-6">
                              <div class="footer__link text-sm-end">
-                                 <a href="policy.html">Privacy Policy</a>
-                                 <a href="terms.html">Terms of Use</a>
+                                 <?php harry_footer_menu() ?>
                              </div>
                          </div>
                      </div>

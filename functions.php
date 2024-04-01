@@ -29,6 +29,7 @@ function harry_theme_support()
         array(
             'main-menu' => __('Main Menu', 'harry'),
             'side-menu' => __('Side Menu', 'harry'),
+            'footer-menu' => __('Footer Menu', 'harry'),
         )
     );
 
