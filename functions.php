@@ -29,6 +29,7 @@ function harry_theme_support()
         array(
             'main-menu' => __('Main Menu', 'harry'),
             'side-menu' => __('Side Menu', 'harry'),
+            'footer-menu' => __('Footer Menu', 'harry'),
         )
     );
 
@@ -86,3 +87,4 @@ if (class_exists('Kirki')) {
 }
 include_once("inc/template-function.php");
 include_once("inc/nav-walker.php");
+include_once("inc/breadcrumb.php");
