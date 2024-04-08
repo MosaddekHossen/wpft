@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-standard postbox__item format-image mb-50 transition-3'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-image postbox__item format-image mb-50 transition-3'); ?>>
     <?php if (has_post_thumbnail()) : ?>
         <div class="postbox__thumb w-img">
             <a href="<?php the_permalink(); ?>">
