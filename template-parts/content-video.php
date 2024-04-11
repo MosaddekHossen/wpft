@@ -8,9 +8,14 @@
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail(); ?>
             </a>
+
             <?php if (!empty($format_url)) : ?>
                 <a href="<?php echo esc_url($format_url); ?>" class="play-btn pulse-btn popup-video"><i class="fas fa-play"></i></a>
             <?php endif; ?>
+
+            <?php ?>
+            <a href="<?php echo esc_url($format_url); ?>" class="play-btn pulse-btn popup-video"><i class="fas fa-play"></i></a>
+
         </div>
     <?php endif; ?>
     <div class="postbox__content">
