@@ -1,10 +1,16 @@
+<?php
+$format_url = get_field('post_format');
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-video postbox__item format-image mb-50 transition-3'); ?>>
     <?php if (has_post_thumbnail()) : ?>
         <div class="postbox__thumb postbox__video w-img p-relative">
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail(); ?>
             </a>
-            <a href="https://youtu.be/-WRZI63emjs" class="play-btn pulse-btn popup-video"><i class="fas fa-play"></i></a>
+            <?php if (!empty($format_url)) : ?>
+                <a href="<?php echo esc_url($format_url); ?>" class="play-btn pulse-btn popup-video"><i class="fas fa-play"></i></a>
+            <?php endif; ?>
         </div>
     <?php endif; ?>
     <div class="postbox__content">
