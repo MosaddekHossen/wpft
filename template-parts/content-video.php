@@ -1,5 +1,5 @@
 <?php
-$format_url = get_field('post_format');
+    $format_url = get_field('post_format');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-video postbox__item format-image mb-50 transition-3'); ?>>
@@ -8,14 +8,9 @@ $format_url = get_field('post_format');
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail(); ?>
             </a>
-
             <?php if (!empty($format_url)) : ?>
                 <a href="<?php echo esc_url($format_url); ?>" class="play-btn pulse-btn popup-video"><i class="fas fa-play"></i></a>
             <?php endif; ?>
-
-            <?php ?>
-            <a href="<?php echo esc_url($format_url); ?>" class="play-btn pulse-btn popup-video"><i class="fas fa-play"></i></a>
-
         </div>
     <?php endif; ?>
     <div class="postbox__content">
