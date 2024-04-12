@@ -13,6 +13,7 @@
             <?php endif; ?>
         </div>
     <?php endif; ?>
+
     <div class="postbox__content">
         <!-- blog meta -->
         <?php echo get_template_part('/template-parts/blog/post-meta'); ?>
