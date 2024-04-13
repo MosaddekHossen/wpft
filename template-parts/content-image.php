@@ -6,7 +6,7 @@
             </a>
         </div>
     <?php endif; ?>
-    <div class="postbox__content">
+    <div class="postbox__content"> 
         <!-- blog meta -->
         <?php echo get_template_part('/template-parts/blog/post-meta'); ?>
         <h3 class="postbox__title">
