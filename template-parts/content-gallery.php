@@ -1,20 +1,22 @@
 <?php
-$format_gallery = get_field('gallery_format');
+$format_gallery = function_exists('get_field') ? get_field('gallery_format') : null;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-gallery postbox__item format-image mb-50 transition-3'); ?>>
     <div class="postbox__thumb postbox__slider swiper-container w-img p-relative">
-        <div class="swiper-wrapper">
-            <?php foreach ($format_gallery as $gallery_item_img) : ?>
-                <div class="postbox__slider-item swiper-slide">
-                    <img src="<?php echo esc_url($gallery_item_img["url"]); ?>" alt="">
-                </div>
-            <?php endforeach; ?>
-        </div>
-        <div class="postbox__nav">
-            <button class="postbox-slider-button-next"><i class="fa-regular fa-angle-right"></i></button>
-            <button class="postbox-slider-button-prev"><i class="fa-regular fa-angle-left"></i></button>
-        </div>
+        <?php if (!empty($format_gallery)) : ?>
+            <div class="swiper-wrapper">
+                <?php foreach ($format_gallery as $gallery_item_img) : ?>
+                    <div class="postbox__slider-item swiper-slide">
+                        <img src="<?php echo esc_url($gallery_item_img["url"]); ?>" alt="Gallery Image">
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="postbox__nav">
+                <button class="postbox-slider-button-next"><i class="fa-regular fa-angle-right"></i></button>
+                <button class="postbox-slider-button-prev"><i class="fa-regular fa-angle-left"></i></button>
+            </div>
+        <?php endif; ?>
     </div>
 
     <div class="postbox__content">
