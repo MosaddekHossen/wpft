@@ -13,6 +13,9 @@ get_header();
                             <?php echo get_template_part('/template-parts/content', get_post_format()); ?>
                         <?php endwhile; ?>
                     <?php endif; ?>
+                    <div class="tp-pagination tp-pagination-style-2 mt-20">
+                        <?php harry_blog_navigation(); ?>
+                    </div>
                 </div>
             </div>
             <div class="col-xxl-4 col-lg-4">
