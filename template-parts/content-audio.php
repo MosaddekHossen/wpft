@@ -1,5 +1,5 @@
 <?php
-$format_url = get_field('post_format');
+$format_url = function_exists('get_field') ? get_field('post_format') : null;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-audio postbox__item format-image mb-50 transition-3'); ?>>
