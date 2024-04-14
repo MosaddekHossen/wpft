@@ -187,6 +187,24 @@ function harry_tags()
     } else {
         ?>
         <i>No tags found</i>
-<?php
+    <?php
     }
+}
+
+// harry_social_share
+function harry_social_share()
+{ ?>
+    <div class="postbox__share text-xl-end">
+        <span>Share On:</span>
+        <a href="https://www.linkedin.com/shareArticle?url=<?php the_permalink(); ?>" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </div>
+<?php
 }

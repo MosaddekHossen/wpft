@@ -19,12 +19,7 @@
                     </div>
                 </div>
                 <div class="col-xl-5">
-                    <div class="postbox__share text-xl-end">
-                        <span>Share On:</span>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
+                    <?php harry_social_share(); ?>
                 </div>
             </div>
         </div>
