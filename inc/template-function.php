@@ -104,7 +104,7 @@ function footer_copyright()
     $footer_copyright = get_theme_mod('harry_footer_copyright', __('© 2024 Harry All Rights Reserved.', 'harry'));
 ?>
     <?php echo wp_kses_post($footer_copyright); ?>
-<?php
+    <?php
 }
 
 // harry_menu
@@ -171,5 +171,22 @@ function harry_blog_navigation()
             echo "<li>$page</li>";
         }
         echo '</ul></nav>';
+    }
+}
+
+// harry_tags
+function harry_tags()
+{
+    $post_tags = get_the_tags();
+    if ($post_tags) {
+        foreach ($post_tags as $tag) {
+    ?>
+            <a href="<?php echo get_tag_link($tag); ?>"><?php echo $tag->name; ?></a>
+        <?php
+        }
+    } else {
+        ?>
+        <i>No tags found</i>
+<?php
     }
 }

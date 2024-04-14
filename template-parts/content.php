@@ -14,11 +14,8 @@
             <div class="row align-items-center">
                 <div class="col-xl-7">
                     <div class="tagcloud tagcloud-sm">
-                        <span>Tags:</span>
-                        <a href="#">Blog</a>
-                        <a href="#">Creative</a>
-                        <a href="#">Portfoilo</a>
-                        <a href="#">Harry</a>
+                        <span><?php echo esc_html__('Tags:', 'harry'); ?></span>
+                        <?php harry_tags(); ?>
                     </div>
                 </div>
                 <div class="col-xl-5">
