@@ -3,7 +3,7 @@
 $author_id = get_the_author_meta('ID');
 
 // Get the author's avatar
-// $author_avatar =  80;
+$author_avatar =  80;
 
 // Get the author's name
 $author_name = get_the_author_meta('display_name');
