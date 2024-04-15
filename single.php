@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <!-- postbox details area start -->
-<section class="postbox__area grey-bg-4 pt-120 pb-120">
+<section class="tp-post-details postbox__area grey-bg-4 pt-120 pb-120">
     <div class="container">
         <div class="row">
             <div class="col-xxl-12">
@@ -165,111 +165,13 @@ get_header();
                                         </div>
                                     </div>
 
-                                    <div class="postbox__comment-wrapper">
-                                        <div class="postbox__comment mb-95">
-                                            <h3 class="postbox__comment-title">Comments (2)</h3>
-                                            <ul>
-                                                <li>
-                                                    <div class="postbox__comment-box d-sm-flex align-items-start">
-                                                        <div class="postbox__comment-info">
-                                                            <div class="postbox__comment-avater">
-                                                                <img src="assets/img/users/user-17.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="postbox__comment-text ">
-                                                            <div class="postbox__comment-name">
-                                                                <span class="post-meta"> July 14, 2022</span>
-                                                                <h5><a href="#">Eleanor Fant</a></h5>
-                                                            </div>
-                                                            <p>One’s of the best template out of there. design, code quality, updates etc everything you needs guys, buy it you won’t regret it!</p>
-                                                            <div class="postbox__comment-reply">
-                                                                <a href="#">Reply</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <ul class="children">
-                                                        <li>
-                                                            <div class="postbox__comment-box d-sm-flex align-items-start">
-                                                                <div class="postbox__comment-info">
-                                                                    <div class="postbox__comment-avater">
-                                                                        <img src="assets/img/users/user-19.jpg" alt="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="postbox__comment-text ">
-                                                                    <div class="postbox__comment-name">
-                                                                        <span class="post-meta"> July 14, 2022</span>
-                                                                        <h5><a href="#">Alexander Ljung</a></h5>
-                                                                    </div>
-                                                                    <p>This theme is super awesome! But I had one small issue with link option in parallax portfolio. The other day! </p>
-                                                                    <div class="postbox__comment-reply">
-                                                                        <a href="#">Reply</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="postbox__comment-box d-sm-flex align-items-start">
-                                                        <div class="postbox__comment-info">
-                                                            <div class="postbox__comment-avater">
-                                                                <img src="assets/img/users/user-18.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="postbox__comment-text ">
-                                                            <div class="postbox__comment-name">
-                                                                <span class="post-meta"> July 14, 2022</span>
-                                                                <h5><a href="#">Shahnewaz Sakil</a></h5>
-                                                            </div>
-                                                            <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked</p>
-                                                            <div class="postbox__comment-reply">
-                                                                <a href="#">Reply</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="postbox__comment-form">
-                                            <h3 class="postbox__comment-form-title">Leave A Reply</h3>
-                                            <p>Your email address will not be published. Required fields are marked *</p>
-                                            <form action="#">
-                                                <div class="row">
-                                                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
-                                                        <div class="postbox__comment-input">
-                                                            <input type="text" placeholder="Name*">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
-                                                        <div class="postbox__comment-input">
-                                                            <input type="email" placeholder="Email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-4 col-xl-4 col-lg-12">
-                                                        <div class="postbox__comment-input">
-                                                            <input type="text" placeholder="Website">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-12">
-                                                        <div class="postbox__comment-input">
-                                                            <textarea placeholder="Your Comment Here..."></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-12">
-                                                        <div class="postbox__comment-agree d-flex align-items-start mb-25">
-                                                            <input class="e-check-input" type="checkbox" id="e-agree">
-                                                            <label class="e-check-label" for="e-agree">Save my name, email, and website in this browser for the next time I comment.</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-12">
-                                                        <div class="postbox__comment-btn">
-                                                            <button type="submit" class="tp-btn">Submit Comment</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
+                                    <?php if (have_posts()) : ?>
+                                        <?php while (have_posts()) : the_post(); ?>
+                                            <?php if (comments_open() || get_comments_number()) :
+                                                comments_template();
+                                            endif; ?>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-lg-4">
