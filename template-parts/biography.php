@@ -29,9 +29,15 @@ $linkedin_url = get_the_author_meta('linkedin_url');
         <p><?php echo esc_html($author_bio); ?></p>
 
         <div class="postbox__author-social d-flex align-items-center">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <?php if (!empty($facebook_url)) : ?>
+                <a target="_blank" href="<?php echo esc_url($facebook_url); ?>"><i class="fa-brands fa-facebook-f"></i></a>
+            <?php endif; ?>
+            <?php if (!empty($twitter_url)) : ?>
+                <a target="_blank" href="<?php echo esc_url($twitter_url); ?>"><i class="fa-brands fa-twitter"></i></a>
+            <?php endif; ?>
+            <?php if (!empty($linkedin_url)) : ?>
+                <a target="_blank" href="<?php echo esc_url($linkedin_url); ?>"><i class="fa-brands fa-linkedin-in"></i></a>
+            <?php endif; ?>
         </div>
     </div>
 </div>
