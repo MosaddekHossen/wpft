@@ -81,6 +81,8 @@ add_action('widgets_init', 'harry_widgets');
 
 // nec files
 include_once("inc/common/scripts.php");
+include_once("inc/common/comments-form-list.php");
+
 // Kirki class condition
 if (class_exists('Kirki')) {
     include_once("inc/harry-kirki.php");
