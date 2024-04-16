@@ -1,24 +1,30 @@
 <?php
 
-// wordpress commnets form  start
+// wordpress comments form  start
 function custom_comment_form_fields($fields)
 {
     $commenter = wp_get_current_commenter();
     $req = get_option('require_name_email');
 
     $fields = array(
-        'author' => '<div class="row"><div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div  class="postbox__comment-input"><input type="text" name="author" id="author" placeholder="' . esc_attr__('Name*', 'harry') . '" value="' . esc_attr($commenter['comment_author']) . '" ' . ($req ? 'required' : '') . '></div>
-     </div>',
+        'author' => '<div class="row">
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                <div  class="postbox__comment-input">
+                    <input type="text" name="author" id="author" placeholder="' . esc_attr__('Name*', 'harry') . '" value="' . esc_attr($commenter['comment_author']) . '" ' . ($req ? 'required' : '') . '></div>
+                </div>',
+
         'email' => '<div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
-        <div class="postbox__comment-input">
-           <input type="email" name="email" id="email" placeholder="' . esc_attr__('Email', 'harry') . '" value="' . esc_attr($commenter['comment_author_email']) . '" ' . ($req ? 'required' : '') . '>
-        </div>
-     </div>',
+                    <div class="postbox__comment-input">
+                        <input type="email" name="email" id="email" placeholder="' . esc_attr__('Email', 'harry') . '" value="' . esc_attr($commenter['comment_author_email']) . '" ' . ($req ? 'required' : '') . '>
+                    </div>
+                </div>',
+
         'url' => '<div class="col-xxl-4 col-xl-4 col-lg-12">
-        <div class="postbox__comment-input">
-           <input type="text" name="url" id="url" placeholder="' . esc_attr__('Website', 'harry') . '" value="' . esc_attr($commenter['comment_author_url']) . '">
-        </div>
-     </div></div>',
+                <div class="postbox__comment-input">
+                    <input type="text" name="url" id="url" placeholder="' . esc_attr__('Website', 'harry') . '" value="' . esc_attr($commenter['comment_author_url']) . '">
+                </div>
+            </div>
+        </div>',
     );
 
     return $fields;
