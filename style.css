@@ -29,6 +29,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .w-img img {
-  width: 100%;
   height: auto;
+}
+
+ul.postbox__comment {
+  list-style: none;
+}
+
+.postbox__comment li {
+  margin-bottom: 20px;
+}
+
+#reply-title a {
+  margin-left: 5px;
+  color: var(--tp-theme-1);
 }
