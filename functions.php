@@ -41,6 +41,15 @@ add_action("after_setup_theme", "harry_theme_support");
 function harry_widgets()
 {
     register_sidebar(array(
+        'name'          => __('Blog Sidebar', 'harry'),
+        'id'            => 'blog-sidebar',
+        'description'   => __('Widgets in this area will be shown blog sidebar.', 'harry'),
+        'before_widget' => '<div id="%1$s" class="sidebar__widget mb-40 %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="sidebar__widget-title">',
+        'after_title'   => '</h3>',
+    ));
+    register_sidebar(array(
         'name'          => __('Footer Widget 01', 'harry'),
         'id'            => 'footer-widget-01',
         'description'   => __('Widgets in this area will be shown footer.', 'harry'),
