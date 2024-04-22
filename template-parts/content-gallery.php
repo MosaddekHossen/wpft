@@ -3,7 +3,7 @@ $format_gallery = function_exists('get_field') ? get_field('gallery_format') : n
 ?>
 <?php if (is_single()) : ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-gallery a77ll'); ?>>
-        <div class="postbox__thumb postbox__slider swiper-container w-img p-relative">
+        <div class="postbox__thumb postbox__slider swiper-container w-img p-relative mb-20">
             <?php if (!empty($format_gallery)) : ?>
                 <div class="swiper-wrapper">
                     <?php foreach ($format_gallery as $gallery_item_img) : ?>
@@ -39,7 +39,7 @@ $format_gallery = function_exists('get_field') ? get_field('gallery_format') : n
     </article>
 <?php else : ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-gallery postbox__item format-image mb-50 transition-3'); ?>>
-        <div class="postbox__thumb postbox__slider swiper-container w-img p-relative">
+        <div class="postbox__thumb postbox__slider swiper-container w-img p-relative mb-20">
             <?php if (!empty($format_gallery)) : ?>
                 <div class="swiper-wrapper">
                     <?php foreach ($format_gallery as $gallery_item_img) : ?>
