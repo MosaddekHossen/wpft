@@ -29,7 +29,7 @@ function harry_logo()
 {
     $harry_logo = get_theme_mod('harry_logo', get_template_directory_uri() . '/assets/img/logo/logo-black.svg');
 ?>
-    <a href="<?php echo esc_url(home_url('/')) ?>">
+    <a href="<?php echo esc_url(home_url('/')); ?>">
         <img src="<?php echo esc_url($harry_logo); ?>" alt="<?php echo bloginfo(); ?>">
     </a>
 <?php
@@ -233,3 +233,24 @@ function display_post_views()
         echo ($post_views ? $post_views : 0);
     }
 }
+
+// Add filter to customize search form
+function harry_search_form($search_form)
+{
+    $search_form = '<div class="sidebar__search">
+                <form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">
+                    <div class="sidebar__search-input">
+                        <input type="search" class="search-field" placeholder="' . esc_attr_x('Enter your keywords...', 'harry') . '" value="' . get_search_query() . '" name="s" />
+                        <button type="submit" class="search-submit">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>';
+
+    return $search_form;
+}
+add_filter('get_search_form', 'harry_search_form');
