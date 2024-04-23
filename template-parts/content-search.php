@@ -1,5 +1,5 @@
 <?php if (is_single()) : ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-standard'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-standard content-search'); ?>> // a77ll
         <?php if (has_post_thumbnail()) : ?>
             <div class="postbox__thumb w-img mb-30">
                 <?php the_post_thumbnail(); ?>
@@ -25,7 +25,7 @@
         </div>
     </article>
 <?php else : ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-standard postbox__item format-image mb-50 transition-3'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('content-search tp-format-standard postbox__item format-image mb-50 transition-3'); ?>>
         <?php if (has_post_thumbnail()) : ?>
             <div class="postbox__thumb w-img">
                 <a href="<?php the_permalink(); ?>">
