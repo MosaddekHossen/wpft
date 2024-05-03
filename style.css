@@ -46,5 +46,9 @@ ul.postbox__comment {
 }
 
 .tagcloud a {
-    font-size: 14px !important;
+  font-size: 14px !important;
+}
+
+.slider__social-9 ul li a svg {
+  width: 30px;
 }
