@@ -1,4 +1,5 @@
 <?php
+
 // Harry theme support
 function harry_theme_support()
 {
