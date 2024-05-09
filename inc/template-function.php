@@ -4,17 +4,30 @@
 function harry_header()
 {
     $header_default_style = get_theme_mod('header_default_setting', 'header-style-1');
+    $header_option = function_exists('get_field') ? get_field('header_style') : null;
 
-    if ($header_default_style == 'header-style-1') {
+    if ($header_option == 'header-style-1') {
         get_template_part('template-parts/header/header-1');
-    } elseif ($header_default_style == 'header-style-2') {
+    } elseif ($header_option == 'header-style-2') {
         get_template_part('template-parts/header/header-2');
-    } elseif ($header_default_style == 'header-style-3') {
+    } elseif ($header_option == 'header-style-3') {
         get_template_part('template-parts/header/header-3');
-    } elseif ($header_default_style == 'header-style-4') {
+    } elseif ($header_option == 'header-style-4') {
         get_template_part('template-parts/header/header-4');
-    } elseif ($header_default_style == 'header-style-5') {
+    } elseif ($header_option == 'header-style-5') {
         get_template_part('template-parts/header/header-5');
+    } else {
+        if ($header_default_style == 'header-style-1') {
+            get_template_part('template-parts/header/header-1');
+        } elseif ($header_default_style == 'header-style-2') {
+            get_template_part('template-parts/header/header-2');
+        } elseif ($header_default_style == 'header-style-3') {
+            get_template_part('template-parts/header/header-3');
+        } elseif ($header_default_style == 'header-style-4') {
+            get_template_part('template-parts/header/header-4');
+        } elseif ($header_default_style == 'header-style-5') {
+            get_template_part('template-parts/header/header-5');
+        }
     }
 }
 
