@@ -52,3 +52,7 @@ ul.postbox__comment {
 .slider__social-9 ul li a svg {
   width: 30px;
 }
+
+body .portfolio__item-9 {
+  height: 480px;
+}
