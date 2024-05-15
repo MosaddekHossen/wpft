@@ -60,3 +60,11 @@ body .portfolio__item-9 {
 body .testimonial__slider-9-thumb-nav img {
   border-radius: 50%;
 }
+
+.contact__list-icon-9 span .contact-icon-shape {
+  max-width: inherit;
+}
+
+.services__icon-9 span img {
+  max-width: inherit;
+}
