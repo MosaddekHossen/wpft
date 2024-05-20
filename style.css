@@ -68,3 +68,9 @@ body .testimonial__slider-9-thumb-nav img {
 .services__icon-9 span img {
   max-width: inherit;
 }
+
+body .testimonial__avater-thumb-4 img {
+  max-width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+}
