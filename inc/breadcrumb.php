@@ -45,9 +45,11 @@ function harry_breadcrumb()
                     <div class="col-xl-10">
                         <div class="breadcrumb__content text-center">
                             <h3 class="breadcrumb__title"><?php echo esc_html($title); ?></h3>
-                            <div class="breadcrumb__list">
-                                <?php bcn_display(); ?>
-                            </div>
+                            <?php if (function_exists('bcn_display')) : ?>
+                                <div class="breadcrumb__list">
+                                    <?php bcn_display(); ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
