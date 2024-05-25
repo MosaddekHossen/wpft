@@ -74,3 +74,15 @@ body .testimonial__avater-thumb-4 img {
   height: 60px !important;
   border-radius: 50% !important;
 }
+
+.portfolio__details-img-list-social {
+  z-index: 10;
+}
+
+body .tp-load-more-btn {
+  display: inline-block !important;
+}
+
+body .slider__shape-21 img {
+  max-width: none;
+}
