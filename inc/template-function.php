@@ -120,6 +120,34 @@ function footer_copyright()
     <?php
 }
 
+/**
+ * Sanitize SVG markup for front-end display.
+ *
+ * @param  string $svg SVG markup to sanitize.
+ * @return string 	  Sanitized markup.
+ */
+function harry_kses($harry_custom_tag = '')
+{
+    $harry_allowed_html = [
+        'svg'  => [
+            'xmlns'       => [],
+            'fill'        => [],
+            'viewbox'     => [],
+            'role'        => [],
+            'aria-hidden' => [],
+            'focusable'   => [],
+            'height'      => [],
+            'width'       => [],
+        ],
+        'path' => [
+            'd'    => [],
+            'fill' => [],
+        ],
+    ];
+
+    return wp_kses($harry_custom_tag, $harry_allowed_html);
+}
+
 // harry_menu
 function harry_menu()
 {
