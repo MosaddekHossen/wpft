@@ -116,7 +116,7 @@ function footer_copyright()
 {
     $footer_copyright = get_theme_mod('harry_footer_copyright', __('© 2024 Harry All Rights Reserved.', 'harry'));
 ?>
-    <?php echo wp_kses_post($footer_copyright); ?>
+    <?php echo harry_kses($footer_copyright); ?>
     <?php
 }
 
@@ -142,6 +142,10 @@ function harry_kses($harry_custom_tag = '')
         'path' => [
             'd'    => [],
             'fill' => [],
+        ],
+        'a' => [
+            'class'    => ['target_blank'],
+            'href' => [],
         ],
     ];
 
