@@ -129,24 +129,98 @@ function footer_copyright()
 function harry_kses($harry_custom_tag = '')
 {
     $harry_allowed_html = [
-        'svg'  => [
-            'xmlns'       => [],
-            'fill'        => [],
-            'viewbox'     => [],
-            'role'        => [],
-            'aria-hidden' => [],
-            'focusable'   => [],
-            'height'      => [],
-            'width'       => [],
+        'svg'                       => [
+            'class' => true,
+            'aria-hidden' => true,
+            'aria-labelledby' => true,
+            'role' => true,
+            'xmlns' => true,
+            'width' => true,
+            'height' => true,
+            'viewbox' => true, // <= Must be lower case!
         ],
-        'path' => [
-            'd'    => [],
-            'fill' => [],
+        'path'  => [
+            'd' => true,
+            'fill' => true,
+            'stroke' => true,
+            'stroke-width' => true,
+            'stroke-linecap' => true,
+            'stroke-linejoin' => true,
+            'opacity' => true,
         ],
-        'a' => [
-            'class'    => ['target_blank'],
-            'href' => [],
+        'a'                         => [
+            'class'     => [],
+            'href'      => [],
+            'title'     => [],
+            'target'    => [],
+            'rel'       => [],
         ],
+        'b' => [],
+        'blockquote'                  => [
+            'cite'      => [],
+        ],
+        'cite'                        => [
+            'title'     => [],
+        ],
+        'code'                => [],
+        'del'                          => [
+            'datetime'   => [],
+            'title'      => [],
+        ],
+        'dd'                => [],
+        'div'                           => [
+            'class'      => [],
+            'title'      => [],
+            'style'      => [],
+        ],
+        'dl'                     => [],
+        'dt'                     => [],
+        'em'                     => [],
+        'h1'                     => [],
+        'h2'                     => [],
+        'h3'                     => [],
+        'h4'                     => [],
+        'h5'                     => [],
+        'h6'                     => [],
+        'i'                              => [
+            'class'       => [],
+        ],
+        'img'                            => [
+            'alt'     => [],
+            'class'   => [],
+            'height'  => [],
+            'src'     => [],
+            'width'   => [],
+        ],
+        'li'                              => [
+            'class'   => [],
+        ],
+        'ol'                              => [
+            'class'   => [],
+        ],
+        'p'                               => [
+            'class'   => [],
+        ],
+        'q'                               => [
+            'cite'    => [],
+            'title'   => [],
+        ],
+        'span'                            => [
+            'class'   => [],
+            'title'   => [],
+            'style'   => [],
+        ],
+        'iframe'                          => [
+            'width'         => [],
+            'height'        => [],
+            'scrolling'     => [],
+            'frameborder'   => [],
+            'allow'         => [],
+            'src'           => [],
+        ],
+        'strike'                    => [],
+        'br'                        => [],
+        'strong'                    => [],
     ];
 
     return wp_kses($harry_custom_tag, $harry_allowed_html);
