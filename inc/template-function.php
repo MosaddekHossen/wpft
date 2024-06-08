@@ -52,10 +52,18 @@ function harry_logo()
 function harry_search_logo()
 {
     $harry_search_logo = get_theme_mod('harry_search_logo', get_template_directory_uri() . '/assets/img/logo/logo.svg');
+    $page_logo = function_exists('get_field') ? get_field('page_logo') : null;
 ?>
-    <a href="<?php echo esc_url(home_url('/')) ?>">
-        <img src="<?php echo esc_url($harry_search_logo); ?>" alt="<?php echo bloginfo(); ?>">
-    </a>
+
+    <?php if (!empty($page_logo)) : ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img src="<?php echo esc_url($page_logo['url']); ?>" alt="<?php echo bloginfo(); ?>">
+        </a>
+    <?php else : ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img src="<?php echo esc_url($harry_search_logo); ?>" alt="<?php echo bloginfo(); ?>">
+        </a>
+    <?php endif; ?>
 <?php
 }
 
