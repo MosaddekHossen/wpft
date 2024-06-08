@@ -27,7 +27,7 @@
                      <div class="row">
                          <div class="col-sm-6">
                              <div class="footer__copyright">
-                                 <p><a href="index.html">© 2022 Harry</a> All Rights Reserved.</p>
+                                 <p><?php footer_copyright(); ?></p>
                              </div>
                          </div>
                          <div class="col-sm-6">
