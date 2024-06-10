@@ -1,12 +1,12 @@
 <?php
 // Check if comments are allowed
 if (comments_open()) :
-    ?>
+?>
     <div id="comments" class="comments-area">
         <?php
         // Display the comments list
         if (have_comments()) :
-            ?>
+        ?>
             <h2 class="postbox__comment-title">
                 <?php
                 $comment_count = get_comments_number();
@@ -24,15 +24,15 @@ if (comments_open()) :
                 ?>
             </ul>
 
-            <?php
+        <?php
             // Display comment pagination if needed
             the_comments_pagination(array(
                 'prev_text' => esc_html__('Previous', 'harry'),
                 'next_text' => esc_html__('Next', 'harry'),
             ));
         endif;
-        
-        if ( is_user_logged_in() ) {
+
+        if (is_user_logged_in()) {
             $cl = 'loginformuser';
         } else {
             $cl = '';
@@ -86,7 +86,8 @@ if (comments_open()) :
 
 <?php
 // Move the comment textarea to the bottom
-function move_comment_textarea_to_bottom($fields) {
+function move_comment_textarea_to_bottom($fields)
+{
     $comment_field = $fields['comment'];
     unset($fields['comment']);
     $fields['comment'] = $comment_field;
@@ -99,40 +100,41 @@ add_action('comment_form_fields', 'move_comment_textarea_to_bottom');
 
 
 // custom_comment_list
-function custom_comment_list($comment, $args, $depth) {
+function custom_comment_list($comment, $args, $depth)
+{
     $GLOBALS['comment'] = $comment;
 
     if ($comment->comment_type == 'pingback' || $comment->comment_type == 'trackback') {
         // Display pingbacks and trackbacks differently if needed
-        ?>
+?>
         <li class="pingback">
             <p><?php esc_html_e('Pingback:', 'harry'); ?> <?php comment_author_link(); ?></p>
         </li>
-        <?php
+    <?php
     } else {
         // Display regular comments
-        ?>
+    ?>
         <li <?php comment_class('comment'); ?> id="comment-<?php comment_ID(); ?>">
-                <div class="postbox__comment-box d-sm-flex align-items-start">
-                    <div class="postbox__comment-info">
-                        <div class="postbox__comment-avater">
-                            <?php echo get_avatar($comment, 80); ?>
-                        </div>
-                    </div>
-                    <div class="postbox__comment-text ">
-                        <div class="postbox__comment-name">
-                            <span class="post-meta"> <?php comment_date(); ?></span>
-                            <h5><?php comment_author(); ?></h5>
-                        </div>
-                        <?php if ($comment->comment_approved == '0') : ?>
-                            <p><?php esc_html_e('Your comment is awaiting moderation.', 'harry'); ?></p>
-                        <?php endif; ?>
-                        <?php comment_text(); ?>
-                        <div class="postbox__comment-reply">
-                        <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
-                        </div>
+            <div class="postbox__comment-box d-sm-flex align-items-start">
+                <div class="postbox__comment-info">
+                    <div class="postbox__comment-avater">
+                        <?php echo get_avatar($comment, 80); ?>
                     </div>
                 </div>
-        <?php
+                <div class="postbox__comment-text ">
+                    <div class="postbox__comment-name">
+                        <span class="post-meta"> <?php comment_date(); ?></span>
+                        <h5><?php comment_author(); ?></h5>
+                    </div>
+                    <?php if ($comment->comment_approved == '0') : ?>
+                        <p><?php esc_html_e('Your comment is awaiting moderation.', 'harry'); ?></p>
+                    <?php endif; ?>
+                    <?php comment_text(); ?>
+                    <div class="postbox__comment-reply">
+                        <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
+                    </div>
+                </div>
+            </div>
+    <?php
     }
 }
