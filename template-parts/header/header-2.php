@@ -13,7 +13,9 @@ $harry_Header_time = get_theme_mod('harry_timing', 'Sunday-Thures 10am-07pm');
                     <div class="row align-items-center">
                         <div class="col-xxl-3 col-xl-3 col-lg-2 col-md-4 col-sm-5 col-8">
                             <div class="logo">
-                                <?php harry_logo(); ?>
+                                <?php harry_search_logo(); ?>
+                                <?php // harry_logo(); 
+                                ?>
                             </div>
                         </div>
                         <div class="col-xxl-7 col-xl-7 col-lg-8 d-none d-lg-block">
