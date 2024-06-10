@@ -35,6 +35,8 @@ function harry_theme_support()
     );
 
     remove_theme_support('widgets-block-editor');
+
+    add_theme_support('woocommerce');
 }
 add_action("after_setup_theme", "harry_theme_support");
 
@@ -100,7 +102,7 @@ add_action('widgets_init', 'harry_widgets');
 
 // nec files
 include_once("inc/common/scripts.php");
-include_once("inc/common/comments-form-list.php");
+// include_once("inc/common/comments-form-list.php");
 
 // Kirki class condition
 if (class_exists('Kirki')) {
