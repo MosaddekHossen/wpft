@@ -36,6 +36,9 @@ function harry_theme_support()
     remove_theme_support('widgets-block-editor');
 
     add_theme_support('woocommerce');
+
+    // Remove woocommerce defauly styles
+    add_filter('woocommerce_enqueue_styles', '__return_false');
 }
 add_action("after_setup_theme", "harry_theme_support");
 
@@ -106,6 +109,10 @@ include_once("inc/common/scripts.php");
 // Kirki class condition
 if (class_exists('Kirki')) {
     include_once("inc/harry-kirki.php");
+}
+
+if (class_exists('WooCommerce')) {
+    include_once("inc/woo.php");
 }
 include_once("inc/template-function.php");
 include_once("inc/nav-walker.php");
