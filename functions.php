@@ -64,6 +64,15 @@ function harry_widgets()
         'after_title'   => '</h4>',
     ));
     register_sidebar(array(
+        'name'          => __('Product Sidebar', 'harry'),
+        'id'            => 'product-sidebar',
+        'description'   => __('Widgets in this area will be shown product sidebar.', 'harry'),
+        'before_widget' => '<div id="%1$s" class="product__widget-item-2 mb-30 %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="product__contact-title">',
+        'after_title'   => '</h4>',
+    ));
+    register_sidebar(array(
         'name'          => __('Footer Widget 01', 'harry'),
         'id'            => 'footer-widget-01',
         'description'   => __('Widgets in this area will be shown footer.', 'harry'),

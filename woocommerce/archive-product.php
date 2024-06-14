@@ -247,7 +247,7 @@ if (woocommerce_product_loop()) {
 					<div class="tab-content" id="shop_tab_content">
 						<div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
 							<!-- shop grid -->
-							<div class="row">
+							<div class="tp-product-grid-main">
 
 								<?php
 								/**
@@ -294,7 +294,7 @@ if (woocommerce_product_loop()) {
 						</div>
 					</div>
 					<!-- pagination -->
-					<div class="row">
+					<div class="row d-none">
 						<div class="col-xxl-12">
 							<div class="tp-pagination tp-pagination-style-2">
 								<nav>
