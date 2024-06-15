@@ -82,6 +82,8 @@ do_action('woocommerce_before_main_content');
  */
 do_action('woocommerce_shop_loop_header');
 
+$product_col = is_active_sidebar('product-sidebar') ? '9' : '12';
+
 if (woocommerce_product_loop()) {
 ?>
 
@@ -94,7 +96,7 @@ if (woocommerce_product_loop()) {
 					</div>
 				</div>
 			<?php endif; ?>
-			<div class="col-lg-9 order-first order-lg-last">
+			<div class="col-lg-<?php echo esc_attr($product_col); ?> order-first order-lg-last">
 				<div class="shop__tab-content mb-40">
 					<div class="tab-content" id="shop_tab_content">
 						<div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
