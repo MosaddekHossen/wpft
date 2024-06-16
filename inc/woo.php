@@ -23,6 +23,22 @@ add_filter('woosq_button_position', '__return_false');
 add_filter('woosc_button_position_archive', '__return_false');
 add_filter('woosc_button_position_single', '__return_false');
 
+// harry_pro_widget_sidebar_before
+function harry_pro_widget_sidebar_before($class)
+{
+    $class = "<div class='harry-pro-list-sidebar'>";
+    return $class;
+}
+add_filter('woocommerce_before_widget_product_list', 'harry_pro_widget_sidebar_before');
+
+// harry_pro_widget_sidebar_after
+function harry_pro_widget_sidebar_after($class)
+{
+    $class = "</div>";
+    return $class;
+}
+add_filter('woocommerce_after_widget_product_list', 'harry_pro_widget_sidebar_after');
+
 // product add to cart button
 function harry_wooc_add_to_cart($args = array())
 {
