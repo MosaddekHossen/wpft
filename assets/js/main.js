@@ -2412,7 +2412,6 @@
 				$(".flex-control-thumbs").addClass("product-thumbnails-slider");
 			}
 
-
 			$('.product-thumbnails-slider').slick({
 				dots: false,
 				arrows: false,
