@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Single Product Meta
  *
@@ -15,26 +16,44 @@
  * @version     3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 
 global $product;
+
+$post_cats = get_the_terms(get_the_ID(), 'product_cat');
 ?>
-<div class="product_meta">
 
-	<?php do_action( 'woocommerce_product_meta_start' ); ?>
+<div class="product_meta ddd">
 
-	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
+	<?php do_action('woocommerce_product_meta_start'); ?>
 
-		<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
+	<?php if (wc_product_sku_enabled() && ($product->get_sku() || $product->is_type('variable'))) : ?>
+		<div class="product__details-sku product__details-more">
+			<p><?php esc_html_e('SKU:', 'woocommerce'); ?></p>
+			<span><?php echo ($sku = $product->get_sku()) ? $sku : esc_html__('N/A', 'woocommerce'); ?></span>
+		</div>
 
 	<?php endif; ?>
 
-	<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+	<div class="product__details-categories product__details-more">
+		<p><?php esc_html_e('Categories:', 'woocommerce'); ?></p>
+		<?php
+		$html = '';
+		foreach ($post_cats as $key => $cat) {
 
-	<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+			$html .= '<span><a href="' . get_category_link($cat->term_id) . '">' . $cat->name . '</a></span>,';
+		}
+		echo rtrim($html, ',');
 
-	<?php do_action( 'woocommerce_product_meta_end' ); ?>
+		?>
+	</div>
+
+	<div class="product__details-tags">
+		<?php echo wc_get_product_tag_list($product->get_id(), ' ', '<span class="tagged_as">' . _n('Tag:', 'Tags:', count($product->get_tag_ids()), 'woocommerce') . ' ', '</span>'); ?>
+	</div>
+
+	<?php do_action('woocommerce_product_meta_end'); ?>
 
 </div>
