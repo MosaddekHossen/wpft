@@ -23,66 +23,51 @@ Use it to make something cool, have fun, and share what you've learned with othe
   list-style: none;
   justify-content: end;
 }
-
 .home .breadcrumb__area {
   display: none;
 }
-
 .w-img img {
   height: auto;
 }
-
 ul.postbox__comment {
   list-style: none;
 }
-
 .postbox__comment li {
   margin-bottom: 20px;
 }
-
 #reply-title a {
   margin-left: 5px;
   color: var(--tp-theme-1);
 }
-
 .tagcloud a {
   font-size: 14px !important;
 }
-
 .slider__social-9 ul li a svg {
   width: 30px;
 }
-
 body .portfolio__item-9 {
   height: 480px;
 }
-
 body .testimonial__slider-9-thumb-nav img {
   border-radius: 50%;
 }
-
 .contact__list-icon-9 span .contact-icon-shape {
   max-width: inherit;
 }
-
 .services__icon-9 span img {
   max-width: inherit;
 }
-
 body .testimonial__avater-thumb-4 img {
   max-width: 60px !important;
   height: 60px !important;
   border-radius: 50% !important;
 }
-
 .portfolio__details-img-list-social {
   z-index: 10;
 }
-
 body .tp-load-more-btn {
   display: inline-block !important;
 }
-
 body .slider__shape-21 img {
   max-width: none;
 }
@@ -130,12 +115,36 @@ body .slider__shape-21 img {
   display: none;
 }
 
+/* Filter Product */
+.price_slider.ui-slider {
+  background: #ddd;
+  height: 5px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.ui-slider-handle {
+  height: 20px;
+  background: blue;
+  width: 5px;
+  position: absolute;
+  top: -8px;
+}
+.ui-slider-range.ui-corner-all.ui-widget-header {
+  background: blue;
+  height: 5px;
+  position: absolute;
+}
+button.button {
+  background: #c8c8c8;
+  padding: 6px 30px;
+  border-radius: 3px;
+}
+
 /* Product details */
 .flex-control-nav.flex-control-thumbs li {
   display: inline-block;
   list-style: none;
 }
-
 .flex-control-nav.flex-control-thumbs {
   padding: 0;
   display: flex;
@@ -160,15 +169,12 @@ body .slider__shape-21 img {
   width: 20%;
   list-style: none;
 }
-
 .flex-control-nav.flex-control-thumbs li img {
   width: 100%;
 }
-
 .product__details-action .stock {
   display: none;
 }
-
 .product__details-action .product-action-btn {
   width: 50px;
   height: 50px;
@@ -183,7 +189,6 @@ body .slider__shape-21 img {
 .product__details-action button:not(:last-child) {
   margin-right: 0;
 }
-
 .product__details-action {
   display: flex;
   align-items: end;
