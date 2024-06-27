@@ -51,7 +51,7 @@ function harry_logo()
 // harry_search_logo
 function harry_search_logo()
 {
-    $harry_search_logo = get_theme_mod('harry_search_logo', get_template_directory_uri() . '/assets/img/logo/logo.svg');
+    $harry_search_logo = get_theme_mod('harry_search_logo', get_template_directory_uri() . '/assets/img/logo/logo-black.svg');
     $page_logo = function_exists('get_field') ? get_field('page_logo') : null;
 ?>
 
