@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Additional Information tab
  *
@@ -15,16 +16,21 @@
  * @version 3.0.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 global $product;
 
-$heading = apply_filters( 'woocommerce_product_additional_information_heading', __( 'Additional information', 'woocommerce' ) );
+$heading = apply_filters('woocommerce_product_additional_information_heading', __('Additional information', 'woocommerce'));
 
 ?>
 
-<?php if ( $heading ) : ?>
-	<h2><?php echo esc_html( $heading ); ?></h2>
-<?php endif; ?>
-
-<?php do_action( 'woocommerce_product_additional_information', $product ); ?>
+<div class="row">
+	<div class="col-xl-9">
+		<?php if ($heading) : ?>
+			<h4 class="mt-40"><?php echo esc_html($heading); ?></h4>
+		<?php endif; ?>
+		<div class="product__details-additional-inner">
+			<?php do_action('woocommerce_product_additional_information', $product); ?>
+		</div>
+	</div>
+</div>
