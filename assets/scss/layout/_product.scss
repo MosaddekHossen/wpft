@@ -2889,3 +2889,16 @@ p.checkout-coupon button {
     }
   }
 }
+
+.woocommerce-product-attributes.shop_attributes {
+  width: 100%;
+}
+.woocommerce-product-attributes-item {
+  border-bottom: 1px solid #e9e9f0;
+}
+.woocommerce-product-attributes-item__value p {
+  margin: 0;
+}
+.woocommerce-product-attributes-item__label {
+  padding: 10px 0;
+}
