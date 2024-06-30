@@ -2902,3 +2902,116 @@ p.checkout-coupon button {
 .woocommerce-product-attributes-item__label {
   padding: 10px 0;
 }
+
+.product__details-description .comment-form-rating .stars > span {
+  color: var(--tp-common-yellow-5);
+}
+
+/*rating icon*/
+@font-face {
+  font-family: star;
+  src: url(../fonts/woo/star.eot);
+  src: url(../fonts/woo/star.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/woo/star.woff) format("woff"),
+    url(../fonts/woo/star.ttf) format("truetype"),
+    url(../fonts/woo/star.svg#star) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: WooCommerce;
+  src: url(../fonts/woo/WooCommerce.eot);
+  src: url(../fonts/woo/WooCommerce.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/woo/WooCommerce.woff) format("woff"),
+    url(../fonts/woo/WooCommerce.ttf) format("truetype"),
+    url(../fonts/woo/WooCommerce.svg#WooCommerce) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+.woocommerce p.stars a {
+  position: relative;
+  height: 1em;
+  width: 1em;
+  text-indent: -999em;
+  display: inline-block;
+  text-decoration: none;
+}
+.woocommerce p.stars a::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  font-family: WooCommerce;
+  content: "\e021";
+  text-indent: 0;
+}
+.woocommerce p.stars a:hover ~ a::before {
+  content: "\e021";
+}
+.woocommerce p.stars:hover a::before {
+  content: "\e020";
+}
+.woocommerce p.stars.selected a.active::before {
+  content: "\e020";
+}
+.woocommerce p.stars.selected a.active ~ a::before {
+  content: "\e021";
+}
+.woocommerce p.stars.selected a:not(.active)::before {
+  content: "\e020";
+}
+
+// review style
+.commentlist {
+  list-style: none;
+  padding-left: 0;
+}
+.commentlist {
+  list-style: none;
+  padding-left: 0;
+}
+.comment_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.comment_container img {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  margin-top: 8px;
+}
+.comment-form-rating .nice-select {
+  width: 140px;
+  float: none;
+  margin-bottom: 15px;
+}
+.nice-select::after {
+  right: 13px;
+}
+.comment-form-comment label {
+  display: block;
+}
+
+#review_form input[type="submit"] {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--tp-common-white);
+  background-color: var(--tp-theme-1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  letter-spacing: -0.02em;
+  font-family: var(--tp-ff-roboto);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 37px;
+  height: auto;
+  line-height: 1.6;
+  border: 0;
+}
