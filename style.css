@@ -200,3 +200,14 @@ button.button {
 .product__details-action .cart {
   margin-right: 5px;
 }
+
+/* rel slider  */
+.rel-slider {
+  margin: 0 -10px;
+}
+/* .rel-slider .col {
+  margin: 0 10px;
+} */
+.rel-slider .product__item {
+  margin: 0 10px;
+}

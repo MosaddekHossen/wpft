@@ -2428,4 +2428,44 @@
 
 	});
 
+	//15. Shop-slider Js
+	$('.rel-slider').slick({
+		slidesToShow: 4,
+		arrows: true,
+		autoplay: false,
+		prevArrow: '<button type="button" class="slick-prev"><i class="far fa-long-arrow-alt-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="far fa-long-arrow-alt-right"></i></button>',
+		Infinity: true,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					arrows: false,
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: false,
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
 })(jQuery);
