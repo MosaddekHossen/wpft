@@ -42804,8 +42804,10 @@ p.checkout-coupon input[type=submit]:hover {
 
 .form-row > label {
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 0;
   color: var(--tp-text-1);
+  margin-bottom: 8px;
+  display: block;
 }
 [dir=rtl] .form-row > label {
   margin-left: 0;
