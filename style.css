@@ -211,3 +211,13 @@ button.button {
 .rel-slider .product__item {
   margin: 0 10px;
 }
+
+/* Shop alert */
+.woocommerce-message {
+  background: #f6f6f6;
+  padding: 12px 30px;
+  margin-bottom: 30px;
+}
+.woocommerce-message a {
+  color: var(--tp-theme-1);
+}
