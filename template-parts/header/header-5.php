@@ -60,24 +60,36 @@
                                                 </svg>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M20.0461 2.59133C19.5419 2.08683 18.9431 1.68663 18.2842 1.41358C17.6252 1.14054 16.9189 1 16.2056 1C15.4923 1 14.786 1.14054 14.127 1.41358C13.468 1.68663 12.8693 2.08683 12.365 2.59133L11.3185 3.63785L10.272 2.59133C9.25342 1.57276 7.87194 1.00053 6.43146 1.00053C4.99098 1.00053 3.6095 1.57276 2.59092 2.59133C1.57235 3.6099 1.00012 4.99139 1.00012 6.43187C1.00012 7.87235 1.57235 9.25383 2.59092 10.2724L3.63745 11.3189L11.3185 19L18.9996 11.3189L20.0461 10.2724C20.5506 9.76814 20.9508 9.16942 21.2239 8.51045C21.4969 7.85148 21.6374 7.14517 21.6374 6.43187C21.6374 5.71857 21.4969 5.01225 21.2239 4.35328C20.9508 3.69431 20.5506 3.09559 20.0461 2.59133V2.59133Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                <span class="tp-item-count">7</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <button class="cartmini-open-btn">
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7.85739 19C8.33077 19 8.71453 18.6163 8.71453 18.1429C8.71453 17.6695 8.33077 17.2857 7.85739 17.2857C7.384 17.2857 7.00024 17.6695 7.00024 18.1429C7.00024 18.6163 7.384 19 7.85739 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M17.286 19C17.7594 19 18.1431 18.6163 18.1431 18.1429C18.1431 17.6695 17.7594 17.2857 17.286 17.2857C16.8126 17.2857 16.4288 17.6695 16.4288 18.1429C16.4288 18.6163 16.8126 19 17.286 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M1.00012 1H4.42869L6.72584 12.4771C6.80422 12.8718 7.0189 13.2263 7.3323 13.4785C7.64571 13.7308 8.03786 13.8649 8.44012 13.8571H16.7716C17.1738 13.8649 17.566 13.7308 17.8794 13.4785C18.1928 13.2263 18.4075 12.8718 18.4858 12.4771L19.8573 5.28571H5.28584" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                <span class="tp-item-count">3</span>
-                                            </button>
-                                        </li>
+                                        <?php if (class_exists('WPCleverWoosw')) :
+                                            $wishlist_data = new WPCleverWoosw();
+
+                                            $key        = $wishlist_data::get_key();
+                                            $products   = $wishlist_data::get_ids($key);
+                                            $count      = count($products);
+                                        ?>
+                                            <li>
+                                                <a href="wishlist.html">
+                                                    <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M20.0461 2.59133C19.5419 2.08683 18.9431 1.68663 18.2842 1.41358C17.6252 1.14054 16.9189 1 16.2056 1C15.4923 1 14.786 1.14054 14.127 1.41358C13.468 1.68663 12.8693 2.08683 12.365 2.59133L11.3185 3.63785L10.272 2.59133C9.25342 1.57276 7.87194 1.00053 6.43146 1.00053C4.99098 1.00053 3.6095 1.57276 2.59092 2.59133C1.57235 3.6099 1.00012 4.99139 1.00012 6.43187C1.00012 7.87235 1.57235 9.25383 2.59092 10.2724L3.63745 11.3189L11.3185 19L18.9996 11.3189L20.0461 10.2724C20.5506 9.76814 20.9508 9.16942 21.2239 8.51045C21.4969 7.85148 21.6374 7.14517 21.6374 6.43187C21.6374 5.71857 21.4969 5.01225 21.2239 4.35328C20.9508 3.69431 20.5506 3.09559 20.0461 2.59133V2.59133Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span class="tp-item-count"><?php echo esc_html($count); ?></span>
+                                                </a>
+                                            </li>
+                                        <?php endif; ?>
+                                        <?php if (class_exists('WooCommerce')) : ?>
+                                            <li>
+                                                <button class="cartmini-open-btn">
+                                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.85739 19C8.33077 19 8.71453 18.6163 8.71453 18.1429C8.71453 17.6695 8.33077 17.2857 7.85739 17.2857C7.384 17.2857 7.00024 17.6695 7.00024 18.1429C7.00024 18.6163 7.384 19 7.85739 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M17.286 19C17.7594 19 18.1431 18.6163 18.1431 18.1429C18.1431 17.6695 17.7594 17.2857 17.286 17.2857C16.8126 17.2857 16.4288 17.6695 16.4288 18.1429C16.4288 18.6163 16.8126 19 17.286 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M1.00012 1H4.42869L6.72584 12.4771C6.80422 12.8718 7.0189 13.2263 7.3323 13.4785C7.64571 13.7308 8.03786 13.8649 8.44012 13.8571H16.7716C17.1738 13.8649 17.566 13.7308 17.8794 13.4785C18.1928 13.2263 18.4075 12.8718 18.4858 12.4771L19.8573 5.28571H5.28584" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span id="tp-cart-item" class="tp-item-count cart__count">
+                                                        <?php echo esc_html(WC()->cart->cart_contents_count); ?>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                        <?php endif; ?>
                                     </ul>
                                 </div>
                                 <div class="header__hamburger ml-30 d-xl-none">
@@ -101,123 +113,7 @@
 <?php get_template_part('/template-parts/header/search-header') ?>
 
 <!-- cart mini area start -->
-<div class="cartmini__area">
-    <div class="cartmini__wrapper d-flex justify-content-between flex-column">
-        <div class="cartmini__top-wrapper ">
-            <div class="cartmini__top p-relative">
-                <div class="cartmini__title">
-                    <h4>Shopping cart</h4>
-                </div>
-                <div class="cartmini__close">
-                    <button type="button" class="cartmini__close-btn cartmini-close-btn"><i class="fal fa-times"></i></button>
-                </div>
-            </div>
-            <div class="cartmini__widget">
-                <div class="cartmini__widget-item">
-                    <div class="cartmini__thumb">
-                        <a href="product-details.html">
-                            <img src="assets/img/product/product-1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="cartmini__content">
-                        <h5><a href="product-details.html">Level Bolt Smart Lock</a></h5>
-                        <div class="cartmini__price-wrapper">
-                            <span class="cartmini__price">$46.00</span>
-                            <span class="cartmini__quantity">x2</span>
-                        </div>
-                    </div>
-                    <button class="cartmini__del"><i class="fal fa-times"></i></button>
-                </div>
-                <div class="cartmini__widget-item">
-                    <div class="cartmini__thumb">
-                        <a href="product-details.html">
-                            <img src="assets/img/product/product-2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="cartmini__content">
-                        <h5><a href="product-details.html">Trademil for younger</a></h5>
-                        <div class="cartmini__price-wrapper">
-                            <span class="cartmini__price">$78.00</span>
-                            <span class="cartmini__quantity">x1</span>
-                        </div>
-                    </div>
-                    <button class="cartmini__del"><i class="fal fa-times"></i></button>
-                </div>
-                <div class="cartmini__widget-item">
-                    <div class="cartmini__thumb">
-                        <a href="product-details.html">
-                            <img src="assets/img/product/product-3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="cartmini__content">
-                        <h5><a href="product-details.html">ViewSonic VP2756-2K</a></h5>
-                        <div class="cartmini__price-wrapper">
-                            <span class="cartmini__price">$98.00</span>
-                            <span class="cartmini__quantity">x3</span>
-                        </div>
-                    </div>
-                    <button class="cartmini__del"><i class="fal fa-times"></i></button>
-                </div>
-            </div>
-            <!-- for wp -->
-            <!-- if no item in cart -->
-            <div class="cartmini__empty text-center d-none">
-                <img src="assets/img/product/cartmini/empty-cart.png" alt="">
-                <p>Your Cart is empty</p>
-                <a href="shop.html" class="tp-btn">Go to Shop</a>
-            </div>
-        </div>
-        <div class="cartmini__checkout">
-            <div class="cartmini__checkout-title mb-30">
-                <h4>Subtotal:</h4>
-                <span>$113.00</span>
-            </div>
-            <div class="cartmini__checkout-btn">
-                <a href="cart.html" class="tp-btn mb-10 w-100"> <span></span> view cart</a>
-                <a href="checkout.html" class="tp-btn-border w-100"> <span></span> checkout</a>
-            </div>
-        </div>
-    </div>
-</div>
+<?php if (class_exists('WooCommerce')) : ?>
+    <?php echo harry_shopping_cart(); ?>
+<?php endif; ?>
 <!-- cart mini area end -->
-
-<!-- newsletter popup area start -->
-<div class="newsletter__area newsletter__area-3 newsletter-popup">
-    <div class="newsletter__wrapper newsletter__wrapper-3">
-        <div class="newsletter__close newsletter__close-3">
-            <button type="button" class="newsletter__close-btn newsletter__close-btn-3 newsletter-close-btn">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-        <div class="newsletter__thumb newsletter__thumb-3 include-bg" data-background="assets/img/newsletter/newsletter-3.jpg"></div>
-        <span class="newsletter__title-pre">Harry Discount</span>
-        <h3 class="newsletter__title-3">Get 16% off</h3>
-        <p>Subscribe now and receive a discount on <br> your first order</p>
-
-        <form action="#">
-            <div class="newsletter__input newsletter__input-2 newsletter__input-3">
-                <input type="email" placeholder="Your email address">
-                <button type="button">Submit
-                    <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.4 1H13.6C14.37 1 15 1.63 15 2.4V10.8C15 11.57 14.37 12.2 13.6 12.2H2.4C1.63 12.2 1 11.57 1 10.8V2.4C1 1.63 1.63 1 2.4 1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M15 2.39999L8 7.29999L1 2.39999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-        </form>
-        <div class="newsletter__proposal">
-            <p><a href="register.html">Signup</a> for Exclusive Updates</p>
-        </div>
-        <div class="newsletter__social">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-    </div>
-</div>
-<div class="newsletter-overlay"></div>
-<!-- newsletter popup area end -->
