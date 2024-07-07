@@ -40,7 +40,7 @@ if (!is_a($product, 'WC_Product')) {
 		</h3>
 		<div class="rc__meta">
 			<span>
-				<?php echo $product->get_price_html(); ?>
+				<?php echo wp_kses_post($product->get_price_html()); ?>
 			</span>
 		</div>
 	</div>

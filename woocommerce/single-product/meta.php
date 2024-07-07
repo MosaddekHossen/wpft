@@ -31,14 +31,14 @@ $post_cats = get_the_terms(get_the_ID(), 'product_cat');
 
 	<?php if (wc_product_sku_enabled() && ($product->get_sku() || $product->is_type('variable'))) : ?>
 		<div class="product__details-sku product__details-more">
-			<p><?php esc_html_e('SKU:', 'woocommerce'); ?></p>
-			<span><?php echo ($sku = $product->get_sku()) ? $sku : esc_html__('N/A', 'woocommerce'); ?></span>
+			<p><?php esc_html_e('SKU:', 'harry'); ?></p>
+			<span><?php echo esc_html($sku = $product->get_sku()) ? $sku : esc_html__('N/A', 'harry'); ?></span>
 		</div>
 
 	<?php endif; ?>
 
 	<div class="product__details-categories product__details-more">
-		<p><?php esc_html_e('Categories:', 'woocommerce'); ?></p>
+		<p><?php esc_html_e('Categories:', 'harry'); ?></p>
 		<?php
 		$html = '';
 		foreach ($post_cats as $key => $cat) {
@@ -51,7 +51,7 @@ $post_cats = get_the_terms(get_the_ID(), 'product_cat');
 	</div>
 
 	<div class="product__details-tags">
-		<?php echo wc_get_product_tag_list($product->get_id(), ' ', '<span class="tagged_as">' . _n('Tag:', 'Tags:', count($product->get_tag_ids()), 'woocommerce') . ' ', '</span>'); ?>
+		<?php echo wc_get_product_tag_list($product->get_id(), ' ', '<span class="tagged_as">' . _n('Tag:', 'Tags:', count($product->get_tag_ids()), 'harry') . ' ', '</span>'); ?>
 	</div>
 
 	<?php do_action('woocommerce_product_meta_end'); ?>

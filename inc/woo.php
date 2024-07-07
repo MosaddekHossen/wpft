@@ -64,8 +64,8 @@ add_filter('woocommerce_add_to_cart_fragments', function ($fragments) {
 });
 
 // woocommerce mini cart count icon
-if (!function_exists('shofy_header_add_to_cart_fragment')) {
-    function shofy_header_add_to_cart_fragment($fragments)
+if (!function_exists('harry_header_add_to_cart_fragment')) {
+    function harry_header_add_to_cart_fragment($fragments)
     {
         ob_start();
     ?>
@@ -78,7 +78,7 @@ if (!function_exists('shofy_header_add_to_cart_fragment')) {
         return $fragments;
     }
 }
-add_filter('woocommerce_add_to_cart_fragments', 'shofy_header_add_to_cart_fragment');
+add_filter('woocommerce_add_to_cart_fragments', 'harry_header_add_to_cart_fragment');
 
 // harry_shopping_cart
 function harry_shopping_cart()
@@ -113,7 +113,7 @@ function harry_sale_percentage()
 {
     global $product;
     $output = '';
-    $icon = esc_html__("-", 'shofy');
+    $icon = esc_html__("-", 'harry');
 
     if ($product->is_on_sale() && $product->is_type('variable')) {
         $percentage = ceil(100 - ($product->get_variation_sale_price() / $product->get_variation_regular_price('min')) * 100);
@@ -342,7 +342,7 @@ function harry_product_list()
                         <div class="product__list-price">
                             <span class="product__list-ammount"><?php woocommerce_template_loop_price(); ?></span>
                         </div>
-                        <p><?php echo $product->get_short_description(); ?></p>
+                        <p><?php echo esc_html($product->get_short_description()); ?></p>
 
                         <div class="product__list-action d-flex flex-wrap align-items-center">
                             <?php harry_wooc_add_to_cart_list(); ?>
@@ -387,7 +387,7 @@ function harry_product_details()
     <div class="product__details-wrapper">
         <?php if (!empty($product->get_stock_quantity())) : ?>
             <div class="product__details-stock">
-                <span><?php echo $product->get_stock_quantity(); ?> <?php echo esc_html($stock_label); ?></span>
+                <span><?php echo esc_html($product->get_stock_quantity()); ?> <?php echo esc_html($stock_label); ?></span>
             </div>
         <?php endif; ?>
 
@@ -399,7 +399,7 @@ function harry_product_details()
                     <?php woocommerce_template_single_rating(); ?>
                 </div>
                 <div class="product__details-rating-count">
-                    <span>(<?php printf(_n('%s customer review', '%s customer reviews', $review_count, 'woocommerce'), '<span class="count">' . esc_html($review_count) . '</span>'); ?>)</span>
+                    <span>(<?php printf(_n('%s customer review', '%s customer reviews', $review_count, 'harry'), '<span class="count">' . esc_html($review_count) . '</span>'); ?>)</span>
                 </div>
             </div>
         <?php endif; ?>
