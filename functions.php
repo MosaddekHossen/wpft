@@ -158,3 +158,5 @@ if (class_exists('WooCommerce')) {
 include_once("inc/template-function.php");
 include_once("inc/nav-walker.php");
 include_once("inc/breadcrumb.php");
+include_once("inc/class-tgm-plugin-activation.php");
+include_once("inc/add_plugin.php");
