@@ -285,12 +285,12 @@ function harry_blog_navigation()
         <path d="M6.17749 10.105L1.62499 5.55248L6.17749 0.999981" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M14.3767 5.55249L1.75421 5.55249" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
      </svg>                                       
-     Prev'),
+     Prev', 'harry'),
         'next_text' => __('Next
         <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
            <path d="M9.82422 1L14.3767 5.5525L9.82422 10.105" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
            <path d="M1.625 5.55249H14.2475" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>')
+        </svg>', 'harry')
     ));
     if ($pages) {
         echo '<nav><ul>';
@@ -308,7 +308,7 @@ function harry_tags()
     if ($post_tags) {
         foreach ($post_tags as $tag) {
     ?>
-            <a href="<?php echo get_tag_link($tag); ?>"><?php echo $tag->name; ?></a>
+            <a href="<?php echo get_tag_link($tag); ?>"><?php echo esc_html($tag->name); ?></a>
         <?php
         }
     } else {
@@ -357,7 +357,7 @@ function display_post_views()
 {
     if (is_single()) {
         $post_views = get_post_meta(get_the_ID(), 'post_views', true);
-        echo ($post_views ? $post_views : 0);
+        echo esc_html($post_views ? $post_views : 0);
     }
 }
 
@@ -367,7 +367,7 @@ function harry_search_form($search_form)
     $search_form = '<div class="sidebar__search">
                 <form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">
                     <div class="sidebar__search-input">
-                        <input type="search" class="search-field" placeholder="' . esc_attr_x('Enter your keywords...', 'harry') . '" value="' . get_search_query() . '" name="s" />
+                        <input type="search" class="search-field" placeholder="' . esc_attr__('Enter your keywords...', 'harry') . '" value="' . get_search_query() . '" name="s" />
                         <button type="submit" class="search-submit">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

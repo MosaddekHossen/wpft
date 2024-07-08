@@ -7,10 +7,10 @@ function harry_breadcrumb()
     $breadcrumb_show = 1;
 
     if (is_front_page() && is_home()) {
-        $title = get_theme_mod('breadcrumb_blog_title', __('Blog xd', 'shofy'));
+        $title = get_theme_mod('breadcrumb_blog_title', __('Blog xd', 'harry'));
         $breadcrumb_class = 'home_front_page';
     } elseif (is_front_page()) {
-        $title = get_theme_mod('breadcrumb_blog_title', __('Blog sss', 'shofy'));
+        $title = get_theme_mod('breadcrumb_blog_title', __('Blog sss', 'harry'));
         $breadcrumb_show = 0;
     } elseif (is_home()) {
         if (get_option('page_for_posts')) {
@@ -21,11 +21,11 @@ function harry_breadcrumb()
     } elseif (is_single() && 'service' == get_post_type()) {
         $title = get_the_title();
     } elseif (is_single() && 'product' == get_post_type()) {
-        $title = get_theme_mod('breadcrumb_product_details', __('Shop', 'shofy'));
+        $title = get_theme_mod('breadcrumb_product_details', __('Shop', 'harry'));
     } elseif (is_search()) {
-        $title = esc_html__('Search Results for : ', 'shofy') . get_search_query();
+        $title = esc_html__('Search Results for : ', 'harry') . get_search_query();
     } elseif (is_404()) {
-        $title = esc_html__('Page not Found', 'shofy');
+        $title = esc_html__('Page not Found', 'harry');
     } elseif (is_archive()) {
         $title = get_the_archive_title();
     } else {

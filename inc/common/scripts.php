@@ -18,6 +18,7 @@ function harry_add_theme_scripts()
     wp_enqueue_style('hover-reveal', get_template_directory_uri() . '/assets/css/hover-reveal.css', array(), '1.1', 'all');
     wp_enqueue_style('main-css-map', get_template_directory_uri() . '/assets/css/main.css.map', array(), '1.1', 'all');
     wp_enqueue_style('harry-main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.1', 'all');
+    wp_enqueue_style('harry-theme-unit', get_template_directory_uri() . '/assets/css/theme-unit.css', array(), '1.1', 'all');
 
     wp_enqueue_style('style', get_stylesheet_uri());
 
