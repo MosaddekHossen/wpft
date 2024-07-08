@@ -1,0 +1,899 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Harry\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-07 21:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.10; wp-6.5.5\n"
+"X-Domain: harry"
+
+#: inc/harry-kirki.php:119 inc/harry-kirki.php:209 inc/harry-kirki.php:219
+#: inc/harry-kirki.php:229 inc/harry-kirki.php:239 inc/template-function.php:84
+#: inc/template-function.php:85 inc/template-function.php:86
+#: inc/template-function.php:87 template-parts/header/side-info.php:5
+#: template-parts/header/side-info.php:7 template-parts/header/side-info.php:8
+#: template-parts/header/side-info.php:9 template-parts/header/side-info.php:10
+msgid "#"
+msgstr ""
+
+#. URI of the theme
+msgid "#/"
+msgstr ""
+
+#. Author URI of the theme
+msgid "#/harry"
+msgstr ""
+
+#. 1: reviews count 2: product name
+#: woocommerce/single-product-reviews.php:35
+#, php-format
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/woo.php:402
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/harry-kirki.php:56 inc/harry-kirki.php:129
+#: template-parts/header/side-info.php:3
+msgid "+964 742 44 763"
+msgstr ""
+
+#: inc/woo.php:116
+msgid "-"
+msgstr ""
+
+#: inc/template-function.php:284
+msgid ""
+"<svg width=\"16\" height=\"11\" viewBox=\"0 0 16 11\" fill=\"none\" "
+"xmlns=\"http://www.w3.org/2000/svg\">\n"
+"        <path d=\"M6.17749 10.105L1.62499 5.55248L6.17749 0.999981\" "
+"stroke=\"currentColor\" stroke-width=\"1.5\" stroke-miterlimit=\"10\" stroke-"
+"linecap=\"round\" stroke-linejoin=\"round\"/>\n"
+"        <path d=\"M14.3767 5.55249L1.75421 5.55249\" stroke=\"currentColor\" "
+"stroke-width=\"1.5\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" "
+"stroke-linejoin=\"round\"/>\n"
+"     </svg>                                       \n"
+"     Prev"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:89
+msgid "A link to set a new password will be sent to your email address."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:65
+msgid "Add"
+msgstr ""
+
+#. %s is product title
+#: woocommerce/single-product-reviews.php:76
+msgid "Add a review"
+msgstr ""
+
+#: inc/woo.php:166 inc/woo.php:174 inc/woo.php:230 inc/woo.php:238
+msgid "Add to Cart"
+msgstr ""
+
+#: woocommerce/single-product/tabs/additional-information.php:23
+msgid "Additional information"
+msgstr ""
+
+#: inc/add_plugin.php:46
+msgid "Advanced custom fields pro"
+msgstr ""
+
+#: inc/add_plugin.php:164
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:129
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:76
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#: inc/add_plugin.php:154
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/add_plugin.php:144
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/add_plugin.php:149
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/harry-kirki.php:267
+msgid "Behance Url"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:27
+#: woocommerce/myaccount/my-address.php:36
+msgid "Billing address"
+msgstr ""
+
+#: inc/harry-kirki.php:342
+msgid "Blog"
+msgstr ""
+
+#: inc/harry-kirki.php:343
+msgid "Blog section here"
+msgstr ""
+
+#: functions.php:81
+msgid "Blog Sidebar"
+msgstr ""
+
+#: inc/breadcrumb.php:13
+msgid "Blog sss"
+msgstr ""
+
+#: inc/breadcrumb.php:10
+msgid "Blog xd"
+msgstr ""
+
+#: inc/harry-kirki.php:352
+msgid "Breadcrumb Image"
+msgstr ""
+
+#: inc/add_plugin.php:68
+msgid "Breadcrumb NavXT"
+msgstr ""
+
+#: inc/woo.php:170 inc/woo.php:234
+msgid "Buy Now"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/grouped.php:68
+msgid "Buy one of this item"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:41
+msgid "Categories:"
+msgstr ""
+
+#: inc/harry-kirki.php:30
+msgid "Choose an option"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:51
+msgid "Clear"
+msgstr ""
+
+#: comments-old.php:13 comments.php:13
+msgid "Comment"
+msgid_plural "Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/add_plugin.php:34
+msgid "Contact Form 7"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:23
+msgid "Description"
+msgstr ""
+
+#: inc/harry-kirki.php:142 inc/harry-kirki.php:156 inc/harry-kirki.php:170
+#: inc/harry-kirki.php:184
+msgid "Disable"
+msgstr ""
+
+#: inc/add_plugin.php:165
+msgid "Dismiss this notice"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:65
+msgid "Edit"
+msgstr ""
+
+#: inc/add_plugin.php:29
+msgid "Elementor Page Builder"
+msgstr ""
+
+#: comments.php:49 woocommerce/single-product-reviews.php:96
+#: inc/common/comments-form-list.php:18
+msgid "Email"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:75
+msgid "Email address"
+msgstr ""
+
+#: inc/harry-kirki.php:141 inc/harry-kirki.php:155 inc/harry-kirki.php:169
+#: inc/harry-kirki.php:183
+msgid "Enable"
+msgstr ""
+
+#: inc/template-function.php:370
+msgid "Enter your keywords..."
+msgstr ""
+
+#: inc/harry-kirki.php:207
+msgid "Facebook Url"
+msgstr ""
+
+#. Filter: verb "to filter"
+#: woocommerce/content-widget-price-filter.php:32
+msgid "Filter"
+msgstr ""
+
+#: inc/harry-kirki.php:247
+msgid "Flickr Url"
+msgstr ""
+
+#: template-parts/header/side-info.php:57
+msgid "Follow :"
+msgstr ""
+
+#: inc/harry-kirki.php:317
+msgid "Footer"
+msgstr ""
+
+#: inc/harry-kirki.php:327
+msgid "Footer copyright"
+msgstr ""
+
+#: functions.php:40
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/harry-kirki.php:318
+msgid "Footer section here"
+msgstr ""
+
+#: functions.php:108
+msgid "Footer Widget 01"
+msgstr ""
+
+#: functions.php:117
+msgid "Footer Widget 02"
+msgstr ""
+
+#: functions.php:126
+msgid "Footer Widget 03"
+msgstr ""
+
+#: functions.php:135
+msgid "Footer Widget 04"
+msgstr ""
+
+#: inc/harry-kirki.php:109 template-parts/header/side-info.php:4
+msgid "Getting Started"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:128
+msgid "Good"
+msgstr ""
+
+#. If there are characters in your language that are not supported
+#. by chosen font(s), translate this to 'off'. Do not translate into your own language.
+#: inc/common/scripts.php:62
+msgctxt "Google font: on or off"
+msgid "on"
+msgstr ""
+
+#. Name of the theme
+msgid "Harry"
+msgstr ""
+
+#: inc/add_plugin.php:39
+msgid "Harry Core"
+msgstr ""
+
+#: inc/harry-kirki.php:6
+msgid "Harry Option"
+msgstr ""
+
+#: inc/harry-kirki.php:44
+msgid "Header Email"
+msgstr ""
+
+#: inc/harry-kirki.php:17
+msgid "Header info"
+msgstr ""
+
+#: inc/harry-kirki.php:54
+msgid "Header Phone"
+msgstr ""
+
+#: inc/harry-kirki.php:27
+msgid "Header Select"
+msgstr ""
+
+#: inc/harry-kirki.php:107
+msgid "Header side button"
+msgstr ""
+
+#: inc/harry-kirki.php:117
+msgid "Header side button url"
+msgstr ""
+
+#: inc/harry-kirki.php:97
+msgid "Header side email"
+msgstr ""
+
+#: inc/harry-kirki.php:127
+msgid "Header side phone"
+msgstr ""
+
+#: inc/harry-kirki.php:32
+msgid "Header Style 01"
+msgstr ""
+
+#: inc/harry-kirki.php:33
+msgid "Header Style 02"
+msgstr ""
+
+#: inc/harry-kirki.php:34
+msgid "Header Style 03"
+msgstr ""
+
+#: inc/harry-kirki.php:35
+msgid "Header Style 04"
+msgstr ""
+
+#: inc/harry-kirki.php:36
+msgid "Header Style 05"
+msgstr ""
+
+#: inc/harry-kirki.php:63
+msgid "Header Time"
+msgstr ""
+
+#: inc/harry-kirki.php:46 inc/harry-kirki.php:99
+#: template-parts/header/side-info.php:2
+msgid "info@example.com"
+msgstr ""
+
+#: inc/add_plugin.php:110
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/add_plugin.php:109
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/add_plugin.php:111
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/add_plugin.php:63
+msgid "Kirki Customizer Framework"
+msgstr ""
+
+#. %s is product title
+#: woocommerce/single-product-reviews.php:78
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: inc/harry-kirki.php:237
+msgid "Linkedin Url"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:48
+msgid "Log in"
+msgstr ""
+
+#: inc/harry-kirki.php:282 inc/harry-kirki.php:292
+msgid "Logo"
+msgstr ""
+
+#: inc/harry-kirki.php:283
+msgid "Logo section here"
+msgstr ""
+
+#: inc/harry-kirki.php:136
+msgid "Logo Switch"
+msgstr ""
+
+#: inc/harry-kirki.php:137
+msgid "Logo switch control"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:51
+msgid "Lost your password?"
+msgstr ""
+
+#: functions.php:38
+msgid "Main Menu"
+msgstr ""
+
+#: woocommerce/content-widget-price-filter.php:29
+#: woocommerce/content-widget-price-filter.php:30
+msgid "Max price"
+msgstr ""
+
+#: woocommerce/content-widget-price-filter.php:27
+#: woocommerce/content-widget-price-filter.php:28
+msgid "Min price"
+msgstr ""
+
+#. Author of the theme
+msgid "Mosaddek"
+msgstr ""
+
+#: inc/harry-kirki.php:7
+msgid "My Panel Description."
+msgstr ""
+
+#: inc/harry-kirki.php:18
+msgid "My Section Description."
+msgstr ""
+
+#: woocommerce/single-product/meta.php:35
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:90
+msgid "Name"
+msgstr ""
+
+#: comments.php:45 inc/common/comments-form-list.php:13
+msgid "Name*"
+msgstr ""
+
+#: comments-old.php:30 comments.php:31
+msgid "Next"
+msgstr ""
+
+#: inc/template-function.php:289
+msgid ""
+"Next\n"
+"        <svg width=\"16\" height=\"11\" viewBox=\"0 0 16 11\" fill=\"none\" "
+"xmlns=\"http://www.w3.org/2000/svg\">\n"
+"           <path d=\"M9.82422 1L14.3767 5.5525L9.82422 10.105\" "
+"stroke=\"currentColor\" stroke-width=\"1.5\" stroke-miterlimit=\"10\" stroke-"
+"linecap=\"round\" stroke-linejoin=\"round\"/>\n"
+"           <path d=\"M1.625 5.55249H14.2475\" stroke=\"currentColor\" stroke-"
+"width=\"1.5\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-"
+"linejoin=\"round\"/>\n"
+"        </svg>"
+msgstr ""
+
+#: inc/add_plugin.php:162
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:114
+msgid "No products in the cart."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:130
+msgid "Not that bad"
+msgstr ""
+
+#: inc/add_plugin.php:58
+msgid "One Click Demo Import"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:142
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Our default theme for 2020 is designed to take full advantage of the "
+"flexibility of the block editor."
+msgstr ""
+
+#: template-parts/content-page.php:9
+msgid "Page"
+msgstr ""
+
+#: inc/breadcrumb.php:28
+msgid "Page not Found"
+msgstr ""
+
+#: template-parts/content-page.php:5
+msgid "Pages:"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:37
+#: woocommerce/myaccount/form-login.php:83
+msgid "Password"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:127
+msgid "Perfect"
+msgstr ""
+
+#: comments.php:111 inc/common/comments-form-list.php:96
+msgid "Pingback:"
+msgstr ""
+
+#: inc/add_plugin.php:167
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/add_plugin.php:160
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/add_plugin.php:163
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: comments-old.php:29 comments.php:30
+msgid "Previous"
+msgstr ""
+
+#: woocommerce/content-widget-price-filter.php:34
+msgid "Price:"
+msgstr ""
+
+#: functions.php:99
+msgid "Product Sidebar"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:126
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:97
+msgid "Register"
+msgstr ""
+
+#: woocommerce/single-product/related.php:28
+msgid "Related products"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:45
+msgid "Remember me"
+msgstr ""
+
+#. %s is the product name
+#: woocommerce/cart/mini-cart.php:76
+#, php-format
+msgid "Remove %s from cart"
+msgstr ""
+
+#: inc/add_plugin.php:159
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:38
+msgid "Reviews"
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:28
+#: woocommerce/single-product/sale-flash.php:27
+msgid "Sale!"
+msgstr ""
+
+#: comments.php:77 inc/common/comments-form-list.php:65
+msgid ""
+"Save my name, email, and website in this browser for the next time I comment."
+msgstr ""
+
+#: template-parts/header/header-5.php:35
+msgid "Search for products..."
+msgstr ""
+
+#: woocommerce/product-searchform.php:24
+msgid "Search for:"
+msgstr ""
+
+#: inc/harry-kirki.php:302
+msgid "Search Logo"
+msgstr ""
+
+#: woocommerce/product-searchform.php:25
+msgid "Search products&hellip;"
+msgstr ""
+
+#: inc/breadcrumb.php:26
+msgid "Search Results for : "
+msgstr ""
+
+#: inc/woo.php:168 inc/woo.php:232
+msgid "Select Options"
+msgstr ""
+
+#: functions.php:90
+msgid "Services Sidebar"
+msgstr ""
+
+#: inc/harry-kirki.php:150
+msgid "Shape Switch"
+msgstr ""
+
+#: inc/harry-kirki.php:151
+msgid "Shape switch control"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:28
+msgid "Shipping address"
+msgstr ""
+
+#: inc/breadcrumb.php:24
+msgid "Shop"
+msgstr ""
+
+#: inc/woo.php:93
+msgid "Shopping cart"
+msgstr ""
+
+#: inc/harry-kirki.php:77
+msgid "Side Info"
+msgstr ""
+
+#: inc/harry-kirki.php:87
+msgid "Side info logo"
+msgstr ""
+
+#: inc/harry-kirki.php:78 inc/harry-kirki.php:198
+msgid "Side info section here"
+msgstr ""
+
+#: functions.php:39
+msgid "Side Menu"
+msgstr ""
+
+#: inc/harry-kirki.php:164
+msgid "Side Menu Switch"
+msgstr ""
+
+#: inc/harry-kirki.php:165
+msgid "Side menu switch control"
+msgstr ""
+
+#: inc/harry-kirki.php:178
+msgid "Side Social Switch"
+msgstr ""
+
+#: inc/harry-kirki.php:179
+msgid "Side social switch control"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:34
+msgid "SKU:"
+msgstr ""
+
+#: inc/harry-kirki.php:197
+msgid "Social Icon"
+msgstr ""
+
+#: inc/add_plugin.php:113
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:82
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/product-searchform.php:26
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: comments.php:70 inc/common/comments-form-list.php:77
+msgid "Submit Comment"
+msgstr ""
+
+#: inc/harry-kirki.php:65
+msgid "Sunday-Thures 10am-07pm"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:54
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/content-audio.php:21 template-parts/content-gallery.php:30
+#: template-parts/content-image.php:17 template-parts/content-search.php:17
+#: template-parts/content-video.php:25 template-parts/content.php:17
+msgid "Tags:"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:47
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: inc/add_plugin.php:124
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/add_plugin.php:161
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/add_plugin.php:139
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/add_plugin.php:134
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product-reviews.php:65
+msgid "There are no reviews yet."
+msgstr ""
+
+#: inc/add_plugin.php:166
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/add_plugin.php:129
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:34
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: inc/add_plugin.php:119
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/add_plugin.php:114
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/harry-kirki.php:217
+msgid "Twitter Url"
+msgstr ""
+
+#: template-parts/header/search-header.php:23
+msgid "Type here to search..."
+msgstr ""
+
+#: inc/add_plugin.php:112
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:67
+msgid "Username"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:32
+msgid "Username or email address"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:131
+msgid "Very poor"
+msgstr ""
+
+#: inc/woo.php:172 inc/woo.php:236
+msgid "View Products"
+msgstr ""
+
+#: inc/harry-kirki.php:257
+msgid "Vimeo Url"
+msgstr ""
+
+#: comments.php:54 inc/common/comments-form-list.php:24
+msgid "Website"
+msgstr ""
+
+#: functions.php:83
+msgid "Widgets in this area will be shown blog sidebar."
+msgstr ""
+
+#: functions.php:110 functions.php:119 functions.php:128 functions.php:137
+msgid "Widgets in this area will be shown footer."
+msgstr ""
+
+#: functions.php:101
+msgid "Widgets in this area will be shown product sidebar."
+msgstr ""
+
+#: functions.php:92
+msgid "Widgets in this area will be shown services sidebar."
+msgstr ""
+
+#: inc/add_plugin.php:73
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/add_plugin.php:53
+msgid "WP Classic Editor"
+msgstr ""
+
+#: inc/add_plugin.php:83
+msgid "WPC Smart Compare"
+msgstr ""
+
+#: inc/add_plugin.php:88
+msgid "WPC Smart Quick View"
+msgstr ""
+
+#: inc/add_plugin.php:78
+msgid "WPC Smart Wishlist"
+msgstr ""
+
+#: inc/add_plugin.php:93
+msgid "YITH WooCommerce Ajax Product Filter"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:69
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#. %s opening and closing link tags respectively
+#: woocommerce/single-product-reviews.php:121
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a review."
+msgstr ""
+
+#: comments.php:64 inc/common/comments-form-list.php:39
+msgid "Your Comment Here..."
+msgstr ""
+
+#: comments.php:130 inc/common/comments-form-list.php:115
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:125
+msgid "Your rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:135
+msgid "Your review"
+msgstr ""
+
+#: inc/harry-kirki.php:227
+msgid "Youtube Url"
+msgstr ""
+
+#: inc/harry-kirki.php:329 inc/template-function.php:125
+msgid "© 2024 Harry All Rights Reserved."
+msgstr ""
