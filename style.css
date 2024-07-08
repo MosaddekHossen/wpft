@@ -16,6 +16,25 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+.main-menu ul li {
+  position: relative !important;
+}
+
+.main-menu ul li.menu-item-has-children > a::after {
+  color: rgba(5, 18, 20, 0.8);
+  content: "\f107";
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  -o-transform: translateY(1px);
+  transform: translateY(1px);
+  font-size: 14px;
+  font-family: var(--tp-ff-fontawesome);
+  font-weight: 400;
+  margin-left: 5px;
+  display: inline-block;
+}
+
 /* Custom Style */
 .footer__link #menu-footer-menu {
   display: flex;
