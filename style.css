@@ -386,3 +386,7 @@ body:not(.woocommerce-block-theme-has-button-styles)
 .woocommerce-mini-cart__buttons.buttons {
   padding: 0 30px;
 }
+
+.sticky {
+  border-top: 5px solid #f00 !important;
+}
