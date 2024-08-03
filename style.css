@@ -390,3 +390,8 @@ body:not(.woocommerce-block-theme-has-button-styles)
 .sticky {
   border-top: 5px solid #f00 !important;
 }
+
+/* End course */
+section.shop__area {
+  padding-top: 150px !important;
+}
