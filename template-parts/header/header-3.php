@@ -7,8 +7,9 @@
                     <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-5 col-8">
                             <div class="logo logo-border">
-                                <?php harry_search_logo(); ?>
-                                <?php // harry_logo(); 
+                                <?php // harry_search_logo(); 
+                                ?>
+                                <?php harry_logo();
                                 ?>
                             </div>
                         </div>
