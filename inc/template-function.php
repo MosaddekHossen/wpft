@@ -88,6 +88,8 @@ function harry_social()
     $harry_flickr = get_theme_mod('harry_flickr', __('', 'harry'));
     $harry_vimeo = get_theme_mod('harry_vimeo', __('', 'harry'));
     $harry_behance = get_theme_mod('harry_behance', __('', 'harry'));
+    $harry_pinterest = get_theme_mod('harry_pinterest', __('', 'harry'));
+    $harry_instagram = get_theme_mod('harry_instagram', __('', 'harry'));
 ?>
     <?php if (!empty($harry_facebook)) : ?>
         <a href="<?php echo esc_url($harry_facebook); ?>"><i class="fab fa-facebook-f"></i></a>
@@ -115,6 +117,14 @@ function harry_social()
 
     <?php if (!empty($harry_behance)) : ?>
         <a href="<?php echo esc_url($harry_behance); ?>"><i class="fab fa-behance"></i></a>
+    <?php endif; ?>
+
+    <?php if (!empty($harry_pinterest)) : ?>
+        <a href="<?php echo esc_url($harry_pinterest); ?>"><i class="fab fa-pinterest-p"></i></a>
+    <?php endif; ?>
+
+    <?php if (!empty($harry_instagram)) : ?>
+        <a href="<?php echo esc_url($harry_instagram); ?>"><i class="fab fa-instagram"></i></a>
     <?php endif; ?>
 <?php
 }
