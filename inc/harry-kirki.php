@@ -270,6 +270,26 @@ function harry_social_section()
             'priority' => 10,
         ]
     );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_pinterest',
+            'label'    => esc_html__('Pinterest Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_instagram',
+            'label'    => esc_html__('Instagram Url', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('', 'harry'),
+            'priority' => 10,
+        ]
+    );
 }
 harry_social_section();
 

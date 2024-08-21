@@ -1,14 +1,16 @@
 <!-- header area start -->
 <header>
     <div class="header__area header__transparent">
-        <div class="header__bottom-13 header__padding-7 header__black-3 header__bottom-border-4 grey-bg-17 header__sticky" id="header-sticky">
+        <div class="header__bottom-13 header__padding-7 header__black-3 header__bottom-border-4  header__sticky" id="header-sticky">
+            <!-- grey-bg-17 -->
             <div class="container-fluid">
                 <div class="mega-menu-wrapper p-relative">
                     <div class="row align-items-center">
                         <div class="col-xxl-1 col-xl-2 col-lg-4 col-md-4 col-sm-5 col-8">
                             <div class="logo">
-                                <?php harry_search_logo(); ?>
-                                <?php // harry_logo(); 
+                                <?php // harry_search_logo(); 
+                                ?>
+                                <?php harry_logo();
                                 ?>
                             </div>
                         </div>
