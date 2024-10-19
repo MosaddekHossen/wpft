@@ -2468,4 +2468,14 @@
 		]
 	});
 
+	// elementor fronted view
+	$(window).on("elementor/frontend/init", function () {
+		elementorFrontend.hooks.addAction(
+			"frontend/element_ready/harry-testimonial-list.default", tp_testimonial_slider
+		);
+		elementorFrontend.hooks.addAction(
+			"frontend/element_ready/harry-portfolio-list.default", tp_portfolio_slider
+		);
+	});
+
 })(jQuery);
