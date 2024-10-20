@@ -576,38 +576,41 @@
 
 	}
 
-	if ($(".testimonial__slider-active-9").length > 0) {
-		$('.testimonial__slider-active-9').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			fade: true,
-			centerMode: false,
-			cssEase: 'linear',
-			asNavFor: '.testimonial__slider-nav-9',
-			rtl: rtl_setting,
-		});
-	}
+	// tp_testimonial_slider
+	function tp_testimonial_slider() {
+		if ($(".testimonial__slider-active-9").length > 0) {
+			$('.testimonial__slider-active-9').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				centerMode: false,
+				cssEase: 'linear',
+				asNavFor: '.testimonial__slider-nav-9',
+				rtl: rtl_setting,
+			});
+		}
 
-	if ($(".testimonial__slider-nav-9").length > 0) {
-		$('.testimonial__slider-nav-9').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			asNavFor: '.testimonial__slider-active-9',
-			dots: false,
-			centerMode: false,
-			focusOnSelect: true,
-			autoplay: false,
-			speed: 100,
-			autoplaySpeed: 8000,
-			cssEase: 'linear',
-			loop: true,
-			prevArrow: '<button type="button" class="slick-prev testimonial-9-button-prev"><i class="fa-regular fa-arrow-left"></i><span>Preview</span></button>',
-			nextArrow: '<button type="button" class="slick-next testimonial-9-button-next"><span>Next</span><i class="fa-regular fa-arrow-right"></i></button>',
-			appendArrows: $('.testimonial__slider-arrow-9'),
-			rtl: rtl_setting,
-		});
+		if ($(".testimonial__slider-nav-9").length > 0) {
+			$('.testimonial__slider-nav-9').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				asNavFor: '.testimonial__slider-active-9',
+				dots: false,
+				centerMode: false,
+				focusOnSelect: true,
+				autoplay: false,
+				speed: 100,
+				autoplaySpeed: 8000,
+				cssEase: 'linear',
+				loop: true,
+				prevArrow: '<button type="button" class="slick-prev testimonial-9-button-prev"><i class="fa-regular fa-arrow-left"></i><span>Preview</span></button>',
+				nextArrow: '<button type="button" class="slick-next testimonial-9-button-next"><span>Next</span><i class="fa-regular fa-arrow-right"></i></button>',
+				appendArrows: $('.testimonial__slider-arrow-9'),
+				rtl: rtl_setting,
+			});
 
+		}
 	}
 
 	var slider = new Swiper('.testimonial__slider-active-4', {
@@ -1566,54 +1569,57 @@
 		});
 	}
 
-	var slider = new Swiper('.portfolio__slider-active-9', {
-		slidesPerView: 4,
-		spaceBetween: 30,
-		loop: true,
-		rtl: rtl_setting,
-		pagination: {
-			el: ".portfolio-slider-dot-9",
-			clickable: true,
-			renderBullet: function (index, className) {
-				return '<span class="' + className + '">' + '<button>' + (index + 1) + '</button>' + "</span>";
+	// tp_portfolio_slider
+	function tp_portfolio_slider() {
+		var slider = new Swiper('.portfolio__slider-active-9', {
+			slidesPerView: 4,
+			spaceBetween: 30,
+			loop: true,
+			rtl: rtl_setting,
+			pagination: {
+				el: ".portfolio-slider-dot-9",
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + '<button>' + (index + 1) + '</button>' + "</span>";
+				},
 			},
-		},
-		// Navigation arrows
-		navigation: {
-			nextEl: ".portfolio-button-next-9",
-			prevEl: ".portfolio-button-prev-9",
-		},
+			// Navigation arrows
+			navigation: {
+				nextEl: ".portfolio-button-next-9",
+				prevEl: ".portfolio-button-prev-9",
+			},
 
-		scrollbar: {
-			el: ".tp-scrollbar",
-			clickable: true,
-		},
+			scrollbar: {
+				el: ".tp-scrollbar",
+				clickable: true,
+			},
 
-		breakpoints: {
-			'1601': {
-				slidesPerView: 4,
+			breakpoints: {
+				'1601': {
+					slidesPerView: 4,
+				},
+				'1400': {
+					slidesPerView: 3,
+				},
+				'1200': {
+					slidesPerView: 2,
+				},
+				'992': {
+					slidesPerView: 2,
+				},
+				'768': {
+					slidesPerView: 1,
+				},
+				'576': {
+					slidesPerView: 1,
+				},
+				'0': {
+					slidesPerView: 1,
+					spaceBetween: 0,
+				},
 			},
-			'1400': {
-				slidesPerView: 3,
-			},
-			'1200': {
-				slidesPerView: 2,
-			},
-			'992': {
-				slidesPerView: 2,
-			},
-			'768': {
-				slidesPerView: 1,
-			},
-			'576': {
-				slidesPerView: 1,
-			},
-			'0': {
-				slidesPerView: 1,
-				spaceBetween: 0,
-			},
-		},
-	});
+		});
+	}
 
 	var portfoliohorizontal = new Swiper('.portfolio__horizontal-active', {
 		slidesPerView: 1,
