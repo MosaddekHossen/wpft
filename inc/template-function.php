@@ -258,6 +258,20 @@ function harry_menu()
     );
 }
 
+// harry_menu
+function harry_language_menu()
+{
+    wp_nav_menu(
+        array(
+            'theme_location'  => 'language-menu',
+            'menu_class'      => '',
+            'menu_id'         => '',
+            'fallback_cb'     => 'Harry_Walker_Nav_Menu::fallback',
+            'walker'     => new Harry_Walker_Nav_Menu,
+        )
+    );
+}
+
 // harry_side_menu
 function harry_side_menu()
 {

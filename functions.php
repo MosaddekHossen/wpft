@@ -39,6 +39,7 @@ function harry_theme_support()
             'main-menu' => __('Main Menu', 'harry'),
             'side-menu' => __('Side Menu', 'harry'),
             'footer-menu' => __('Footer Menu', 'harry'),
+            'language-menu' => __('Language Menu', 'harry'),
         )
     );
 

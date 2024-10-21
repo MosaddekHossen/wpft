@@ -59,12 +59,13 @@ $harry_Header_time = get_theme_mod('harry_timing', 'Sunday-Thures 10am-07pm');
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-2">
                         <div class="header__top-right d-flex justify-content-end align-items-center">
                             <div class="header__lang ml-30">
-                                <span class="header__lang-selected-lang tp-lang-toggle" id="tp-header-lang-toggle">English</span>
+                                <!-- <span class="header__lang-selected-lang tp-lang-toggle" id="tp-header-lang-toggle">English</span>
                                 <ul class="header__lang-list tp-lang-list">
                                     <li>Spanish</li>
                                     <li>English</li>
                                     <li>Canada</li>
-                                </ul>
+                                </ul> -->
+                                <?php harry_language_menu(); ?>
                             </div>
                         </div>
                     </div>
